@@ -1,0 +1,62 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  margin: 0;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+a,
+a:active, /* активная/посещенная ссылка */
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  appearance: none;
+  cursor: pointer;
+  /* Другие свойства по необходимости */
+}
+
+div {
+  box-sizing: border-box;
+}

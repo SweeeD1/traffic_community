@@ -1,0 +1,12 @@
+@mixin PersonalAccountTextStyles {
+  font-family: $Main-font;
+  font-size: 20px;
+}
+
+@mixin Hover-Button-Effect {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  &:hover {
+    background-color: $Buttons-color-hover;
+    color: rgba(255, 255, 255, 1);
+  }
+}

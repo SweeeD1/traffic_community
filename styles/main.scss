@@ -1,0 +1,13 @@
+@import "./mixins.scss";
+@import "./vars.scss";
+@import "./reset.scss";
+@import "./dashboard/dashboard.scss";
+@import "./account_navigation/account_navigation.scss";
+@import "./personal_account/personal_account.scss";
+@import "./links/links.scss";
+
+.body {
+  background-color: #130018;
+  background-image: url(/traffic_community/images/main-vector.png);
+  background-repeat: no-repeat;
+}

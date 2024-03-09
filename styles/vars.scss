@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Kernel";
+  src: url("../kernel_font/Kernel-Regular.otf") format("opentype");
+}
+
+$Main-font: "Tektur", sans-serif;
+$Main-font-color: #fff;
+$Background-color-container:  rgba(0, 0, 0, 0.7);
+$Buttons-color: rgba(84, 32, 98, 0.7);
+$Buttons-color-hover: #780099;

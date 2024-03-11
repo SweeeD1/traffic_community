@@ -1,0 +1,121 @@
+.channels__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: $Background-color-container;
+  border-radius: 20px;
+  width: 980px;
+  max-height: 650px;
+  padding: 30px 15px 25px 15px;
+  margin-right: 5%;
+  margin-top: 24px;
+
+  
+
+  &-tittle {
+    @include PersonalAccountTextStyles;
+    color: $Main-font-color;
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-height: 0;
+    width: 100%;
+    overflow-y: auto; /* Добавляет вертикальное колесо прокрутки при необходимости */
+    
+
+    &__main {
+      display: flex;
+      position: sticky;
+      align-items: center;
+      padding-left: 15px;
+      gap: 334px;
+      color: $Main-font-color;
+      @include PersonalAccountTextStyles;
+      background-color: $Buttons-color-hover;
+      min-height: 60px;
+      position: sticky;
+      top: 0;
+    }
+  }
+
+}
+
+.channels__container-list__main--block {
+  display: flex;
+  flex-direction: row;
+  gap: 95px;
+}
+
+.channels__container-list__container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  font-family: $Main-font;
+  color: $Main-font-color;
+  background-color: $Buttons-color;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  min-height: 60px;
+  font-size: 18px;
+  align-items: center;
+
+  &--block {
+    position: absolute;
+    left: 500px;
+    display: flex;
+    flex-direction: row;
+    gap: 160px;
+  }
+
+  &--name {
+    margin-right: auto;
+  }
+}
+
+.channels__container-list__container--accept {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #C800FF;
+  border: 2px solid #D333FF;
+  border-radius: 10px;
+  width: 117px;
+  height: 45px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #D333FF;
+    color: black;
+  }
+}
+
+.channels__container-list__container--profit {
+  width: max-content;
+}
+
+.channels__container-list__container.black-bg {
+  background-color: transparent;
+} 
+
+
+.channels__container-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+.channels__container-list::-webkit-scrollbar-track {
+  background-color: transparent; /* сделать фон прозрачным */
+}
+
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #fff;
+}

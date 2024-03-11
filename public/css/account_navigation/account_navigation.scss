@@ -29,3 +29,9 @@
     color: #fff;
   }
 }
+
+.personal_account-nav__button.active {
+  background-color: $Buttons-color-hover;
+  border-radius: 10px;
+  color: #fff;
+}

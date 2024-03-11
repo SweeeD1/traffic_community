@@ -69,7 +69,7 @@ div {
   justify-content: center;
   flex-direction: column;
   gap: 90px;
-  width: fit-content;
+  width: 980px;
   margin-top: 24px;
   margin-right: 5%;
 }
@@ -297,11 +297,17 @@ div {
   color: #fff;
 }
 
+.personal_account-nav__button.active {
+  background-color: #780099;
+  border-radius: 10px;
+  color: #fff;
+}
+
 .personal_account {
   display: flex;
   box-sizing: border-box;
   justify-content: center;
-  gap: 18px;
+  gap: 20px;
 }
 
 .personal_account__logo {
@@ -314,11 +320,11 @@ div {
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 20px;
-  width: 982px;
-  max-height: 850px;
+  width: 980px;
+  max-height: 650px;
   margin-top: 24px;
   margin-right: 5%;
-  padding: 29px 15px 48px 15px;
+  padding: 30px 15px 48px 15px;
 }
 .links_container-tittle {
   display: flex;
@@ -402,14 +408,148 @@ div {
   align-items: center;
   justify-content: space-between;
 }
+.links_container-list__container--name {
+  width: 170px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.links_container-list__container--name_text {
+  display: inline;
+}
+.links_container-list__container--name_uah {
+  display: inline;
+}
 .links_container-list__container--link {
   cursor: pointer;
+  margin-right: 60px;
 }
 .links_container-list::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 
 .links_container-list::-webkit-scrollbar-track {
+  background-color: transparent; /* сделать фон прозрачным */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.name-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 5px;
+}
+
+.channels__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  width: 980px;
+  max-height: 650px;
+  padding: 30px 15px 25px 15px;
+  margin-right: 5%;
+  margin-top: 24px;
+}
+.channels__container-tittle {
+  font-family: "Tektur", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+.channels__container-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto; /* Добавляет вертикальное колесо прокрутки при необходимости */
+}
+.channels__container-list__main {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  padding-left: 15px;
+  gap: 334px;
+  color: #fff;
+  font-family: "Tektur", sans-serif;
+  font-size: 20px;
+  background-color: #780099;
+  min-height: 60px;
+  position: sticky;
+  top: 0;
+}
+
+.channels__container-list__main--block {
+  display: flex;
+  flex-direction: row;
+  gap: 95px;
+}
+
+.channels__container-list__container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  font-family: "Tektur", sans-serif;
+  color: #fff;
+  background-color: rgba(84, 32, 98, 0.7);
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  min-height: 60px;
+  font-size: 18px;
+  align-items: center;
+}
+.channels__container-list__container--block {
+  position: absolute;
+  left: 500px;
+  display: flex;
+  flex-direction: row;
+  gap: 160px;
+}
+.channels__container-list__container--name {
+  margin-right: auto;
+}
+
+.channels__container-list__container--accept {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #C800FF;
+  border: 2px solid #D333FF;
+  border-radius: 10px;
+  width: 117px;
+  height: 45px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.channels__container-list__container--accept:hover {
+  background-color: #D333FF;
+  color: black;
+}
+
+.channels__container-list__container--profit {
+  width: max-content;
+}
+
+.channels__container-list__container.black-bg {
+  background-color: transparent;
+}
+
+.channels__container-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.channels__container-list::-webkit-scrollbar-track {
   background-color: transparent; /* сделать фон прозрачным */
 }
 

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../public/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tienne:wght@400;700;900&display=swap" rel="stylesheet">
+  <title>Traffic Community))</title>
+</head>
+<body class="body">
+  <div class="personal_account__logo">
+    <img src="../public/images/Logo.png" alt="logo">
+  </div>
+  <div class="personal_account">
+    <div class="personal_account-nav">
+      <div class="personal_account-nav__case">
+        <button onclick="openDashboard()" class="personal_account-nav__button" data-action="openDashboard" data-active="true">Дашборд</button>
+      </div>
+      <div class="personal_account-nav__case">
+        <button onclick="openLinks()" class="personal_account-nav__button" data-action="openLinks" data-active="true">Посилання</button>
+      </div>
+      <div class="personal_account-nav__case">
+        <button onclick="openChannels()" class="personal_account-nav__button" data-action="openChannels" data-active="true">Всі канали</button>
+      </div>
+      <div class="personal_account-nav__case">
+        <button onclick="openSettings()" class="personal_account-nav__button" data-action="openSettings" data-active="true">Налаштування</button>
+      </div>
+      <div class="personal_account-nav__case">
+        <button onclick="openSupport()" class="personal_account-nav__button" data-action="openSupport" data-active="true">Підтримка</button>
+      </div>
+    </div>
+  
+    <div class="dashboard_container" id="dashboardContainer">
+      <div class="dashboard_container-money">
+          
+
+        <div class="dashboard_container-balance dashboard_container--styles">
+          <p class="dashboard_container-balance__tittle">Баланс</p>
+          <div class="dashboard_container-balance__divider"></div>
+          <p class="dashboard_container-balance__money">0.00 UAH</p>
+          <form action="">
+            <button class="dashboard_container-balance__button">
+              <p class="dashboard_container-balance__button--text">Зняти кошти</p>
+            </button>
+          </form>
+        </div>
+    
+        <div class="dashboard_container-earnings dashboard_container--styles">
+          <p class="dashboard_container-earnings__tittle">Прибуток</p>
+          <div class="dashboard_container-earnings__divider"></div>
+          <div class="dashboard_container-earnings__earnings-container">
+            <div class="dashboard_container-earnings__month-earnings">
+              <p class="dashboard_container-earnings__month-text">За місяць:</p>
+              <p class="dashboard_container-earnings__month-balance">0.00 UAH</p>
+            </div>
+            <div class="dashboard_container-earnings__general-earnings">
+              <p class="dashboard_container-earnings__general-text">Загальний:</p>
+              <p class="dashboard_container-earnings__general-balance">0.00 UAH</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+
+      <div class="dashboard_container-history">
+        <div class="dashboard_container-history_tittle">
+          <p class="dashboard_container-history_tittle-text">Історія транзакцій</p>
+          <div class="dashboard_container-history_tittle_popup-container">
+            <img src="../public/images/pop-up.png" alt="pop-up-button">
+            <div class="dashboard_container-history_tittle-popup-message">
+              <p>Ми працюэмо з 09:00 - 20:00</p>
+              <p>Виплати проходять протягом 4-х годин</p>
+            </div>
+          </div>
+        
+        </div>
+        <div class="dashboard_container-history_container">
+          <p class="dashboard_container-history_container-date">Дата</p>
+          <p class="dashboard_container-history_container-appointment">Призначення</p>
+        </div>
+        <div class="dashboard_container-history_links"></div>
+        
+      </div>
+    </div>
+  
+    <div class="links_container" id="linksContainer">
+      <div class="links_container-tittle">
+        <p class="links_container-tittle_text">Ваші посилання</p>
+        <form action="">
+          <button class="links_container-tittle__button">
+            <p class="links_container-tittle__button-text">Відкликанні</p>
+          </button>
+        </form>
+      </div>
+      <div class="links_container__divider"></div>
+      <div class="links_container-list">
+        <div class="links_container-list__main">
+          <p class="links_container-list__main--name">Назва каналу</p>
+          <p class="links_container-list__main--link">Посилання</p>
+          <p class="links_container-list__main--earnings">Заробіток</p>
+        </div>
+        <div class="links_container-list__container">
+          <div class="links_container-list__container--name">
+            <div class="name-text">
+              <p class="links_container-list__container--name_text">Цікавий світ</p>
+            </div>
+            <div class="name-uah">
+              <p class="links_container-list__container--name_uah">(3.5 UAH)</p>
+            </div>
+          </div>
+          <p class="links_container-list__container--link" onclick="copyText()">https://t.me/+o_zLtHJ5_zxlYTc6</p>
+          <p class="links_container-list__container--earnings">213514 UAH</p>
+        </div>
+        <div class="links_container-list__container">
+          <div class="links_container-list__container--name">
+            <div class="name-text">
+              <p class="links_container-list__container--name_text">Цікавий світ</p>
+            </div>
+            <div class="name-uah">
+              <p class="links_container-list__container--name_uah">(3.5 UAH)</p>
+            </div>
+          </div>
+          <p class="links_container-list__container--link" onclick="copyText()">https://t.me/+o_zLtHJ5_zxlYTc6</p>
+          <p class="links_container-list__container--earnings">213514 UAH</p>
+        </div>
+        <div class="links_container-list__container">
+          <div class="links_container-list__container--name">
+            <div class="name-text">
+              <p class="links_container-list__container--name_text">Цікавий світ</p>
+            </div>
+            <div class="name-uah">
+              <p class="links_container-list__container--name_uah">(3.5 UAH)</p>
+            </div>
+          </div>
+          <p class="links_container-list__container--link" onclick="copyText()">https://t.me/+o_zLtHJ5_zxlYTc6</p>
+          <p class="links_container-list__container--earnings">213514 UAH</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="channels__container" id="channelsContainer">
+      <p class="channels__container-tittle">Інформація про канали</p>
+      <div class="channels__container-list">
+        <div class="channels__container-list__main">
+          <p class="channels__container-list__main--name">Назва каналу</p>
+          <div class="channels__container-list__main--block">
+            <p class="channels__container-list__main--profit">Профіт</p>
+            <p class="channels__container-list__main--subscribers">Залишок підп.</p>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="channels__container-list__container">
+            <p class="channels__container-list__container--name">Цікавий світ </p>
+            <div class="channels__container-list__container--block">
+              <p class="channels__container-list__container--profit">3 UAH</p>
+              <p class="channels__container-list__container--subscribers">6016</p>
+            </div> 
+            <button class="channels__container-list__container--accept">Згенерувати</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  
+    <div class="settings__container" id="settingsContainer">
+      <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, magni! Doloremque velit voluptates fugit quam? Rem dicta esse maxime cumque quisquam recusandae suscipit earum magnam ipsum nam. At in eos natus ipsam iusto inventore esse commodi! Nisi a molestias nobis veniam porro. Fugiat quae eum sit eligendi soluta ipsa consequatur, perferendis odit labore aut quis. Odit, provident eum consequatur numquam qui beatae totam quos tenetur odio nam illum, error eos? Dicta porro pariatur aliquam sunt soluta vero facilis rerum sapiente.</div>
+    </div>
+
+    <div class="support__container" id="supportContainer">
+      <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, magni! Doloremque velit voluptates fugit quam? Rem dicta esse maxime cumque quisquam recusandae suscipit earum magnam ipsum nam. At in eos natus ipsam iusto inventore esse commodi! Nisi a molestias nobis veniam porro. Fugiat quae eum sit eligendi soluta ipsa consequatur, perferendis odit labore aut quis. Odit, provident eum consequatur numquam qui beatae totam quos tenetur odio nam illum, error eos? Dicta porro pariatur aliquam sunt soluta vero facilis rerum sapiente.
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, magni! Doloremque velit voluptates fugit quam? Rem dicta esse maxime cumque quisquam recusandae suscipit earum magnam ipsum nam. At in eos natus ipsam iusto inventore esse commodi! Nisi a molestias nobis veniam porro. Fugiat quae eum sit eligendi soluta ipsa consequatur, perferendis odit labore aut quis. Odit, provident eum consequatur numquam qui beatae totam quos tenetur odio nam illum, error eos? Dicta porro pariatur aliquam sunt soluta vero facilis rerum sapiente.
+
+      </div>
+    </div>
+  
+  </div>
+
+</body>
+<script src="../account-navigation.js"></script>
+<script src="../copy-links.js"></script>
+</html>

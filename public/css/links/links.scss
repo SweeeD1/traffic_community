@@ -3,11 +3,11 @@
   flex-direction: column;
   background-color: $Background-color-container;
   border-radius: 20px;
-  width: 982px;
-  max-height: 850px;
+  width: 980px;
+  max-height: 650px;
   margin-top: 24px;
   margin-right: 5%;
-  padding: 29px 15px 48px 15px;
+  padding: 30px 15px 48px 15px;
 
   &-tittle {
     display: flex;
@@ -96,11 +96,26 @@
       justify-content: space-between;
 
       &--name {
+        width: 170px;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
 
+        &_text {
+          display: inline;
+        }
+
+        &_uah {
+          display: inline;
+        }
       }
 
       &--link {
         cursor: pointer;
+        margin-right: 60px;
       }
 
       &--earnings {
@@ -110,8 +125,7 @@
 }
 
 .links_container-list::-webkit-scrollbar {
-  width: 8px;
-  
+  width: 5px;
 }
 
 .links_container-list::-webkit-scrollbar-track {
@@ -121,4 +135,11 @@
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-color: #fff;
+}
+
+.name-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 5px;
 }

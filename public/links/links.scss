@@ -1,0 +1,124 @@
+.links_container {
+  display: flex;
+  flex-direction: column;
+  background-color: $Background-color-container;
+  border-radius: 20px;
+  width: 982px;
+  max-height: 850px;
+  margin-top: 24px;
+  margin-right: 5%;
+  padding: 29px 15px 48px 15px;
+
+  &-tittle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 33px;
+    width: 100%;
+
+    &_text {
+      color: $Main-font-color;
+      font-family: $Main-font;
+      font-size: 24px;
+    }
+
+    &__button {
+      @include PersonalAccountTextStyles;
+      @include Hover-Button-Effect;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 45px;
+      background-color:$Buttons-color;
+      border-radius: 10px;
+      color: rgba(255, 255, 255, 0.7); 
+    }
+  }
+
+  &__divider {
+    padding: 0 30px 0 30px;
+    border: none;
+    height: 1px;
+    width: 100%;
+    background-color:$Main-font-color;
+    margin-bottom: 39px;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-height: 0;
+    width: 100%;
+    overflow-y: auto; /* Добавляет вертикальное колесо прокрутки при необходимости */
+  
+
+    &__main {
+      display: flex;
+      position: sticky;
+      top: 0;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px  15px 0px 15px;
+      width: 100%;
+      min-height: 60px;
+      background-color: $Buttons-color-hover;
+      color: $Main-font-color;
+      @include PersonalAccountTextStyles;
+
+      &--name {
+        width: 140px;
+      }
+
+      &--link {
+        width: 140px;
+      }
+
+      &--earnings {
+      }
+    }
+
+    &__container {
+      background-color: $Buttons-color;
+      color: $Main-font-color;
+      @include PersonalAccountTextStyles;
+      font-size: 14px;
+      min-height: 50px;
+      width: 100%;
+      color: white;
+      display: flex;
+      gap: 20px;
+      padding: 0px 15px 0px 15px;
+      align-items: center;
+      justify-content: space-between;
+
+      &--name {
+
+      }
+
+      &--link {
+        cursor: pointer;
+      }
+
+      &--earnings {
+      }
+    }
+  }
+}
+
+.links_container-list::-webkit-scrollbar {
+  width: 8px;
+  
+}
+
+.links_container-list::-webkit-scrollbar-track {
+  background-color: transparent; /* сделать фон прозрачным */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #fff;
+}

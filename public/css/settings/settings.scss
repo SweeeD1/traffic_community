@@ -1,0 +1,235 @@
+.settings__container {
+  width: fit-content;
+
+  &--general {
+    @include PersonalAccountTextStyles;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 980px;
+    height: 270px;
+    background-color: $Background-color-container;
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 45px;
+    margin-right: 180px;
+  }
+
+  &--tittle {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 15px;
+    background-color: $Buttons-color-hover;
+    width: 100%;
+    height: 60px;
+    border-radius: 20px;
+
+    &__text {
+      @include PersonalAccountTextStyles;
+    }
+  }
+
+  &--personal__data {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    &--text {
+      font-weight: 100;
+      font-size: 15px;
+      letter-spacing: 2px;
+    }
+
+    &--email {
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+
+    &--password {
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.settings__container--personal {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  margin-left: 27px;
+  margin-top: 32px;
+  margin-right: 96px;
+}
+
+.settings__container--personal__data--general {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.settings__container__data--email__form {
+  display: none;
+  @include PasswordEmailFormStyles;
+
+  &--tittle {
+    margin-bottom: 10px;
+
+    &-text {
+      font-size: 24px;
+    }
+  }
+
+  &--divider {
+    padding: 0 30px 0 30px;
+    border: none;
+    height: 1px;
+    width: 90%;
+    background-color:$Main-font-color;
+    margin-bottom: 15px;
+  }
+
+  &--label {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    &--oldEmail {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      align-items: center;
+      
+    }
+
+    &--newEmail {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      align-items: center;
+    }
+
+    &_button {
+      @include Hover-Button-Effect;
+      width: 220px;
+      height: 40px;
+      color: $Main-font-color;
+      background-color: $Buttons-color;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+  }
+}
+
+#email {
+  width: 285px;
+  height: 30px;
+  padding-left: 5px;
+  background-color: $Main-font-color;
+  border-radius: 5px;
+  color: black;
+}
+
+#confirmation_code {
+  width: 285px;
+  height: 30px;
+  padding-left: 5px;
+  background-color: $Main-font-color;
+  border-radius: 5px;
+  color: black;
+
+  &::placeholder {
+    font-size: 16px;
+  }
+}
+
+.settings__container__data--password__form  {
+  display: none;
+  @include PasswordEmailFormStyles;
+
+  &--tittle {
+    margin-bottom: 10px;
+
+    &-text {
+      font-size: 24px;
+    }
+  }
+
+  &--divider {
+    padding: 0 30px 0 30px;
+    border: none;
+    height: 1px;
+    width: 90%;
+    background-color:$Main-font-color;
+    margin-bottom: 15px;
+  }
+
+  &--label {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    &--oldPassword {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      gap: 2px;
+      align-items: center;
+    }
+
+    &--newPassword {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      gap: 2px;
+      align-items: center;
+    }
+
+    &_button {
+      @include Hover-Button-Effect;
+      width: 220px;
+      height: 40px;
+      color: $Main-font-color;
+      background-color: $Buttons-color;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+  }
+}
+
+#OldPassword {
+  width: 285px;
+  height: 30px;
+  padding-left: 5px;
+  background-color: $Main-font-color;
+  border-radius: 5px;
+  color: black;
+}
+
+#NewPassword {
+  width: 285px;
+  height: 30px;
+  padding-left: 5px;
+  background-color: $Main-font-color;
+  border-radius: 5px;
+  color: black;
+}
+
+.settings__container__data--password__form--label--eye1 {
+  position: absolute;
+  top: 34px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.settings__container__data--password__form--label--eye1 img {
+  width: 20px;
+  height: 20px;
+}
+
+.settings__container__data--password__form--label--eye1:hover img {
+  opacity: 0.8;
+}

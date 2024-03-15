@@ -10,3 +10,21 @@
     color: rgba(255, 255, 255, 1);
   }
 }
+
+@mixin PasswordEmailFormStyles {
+  @include PersonalAccountTextStyles;
+  box-sizing: border-box;
+  align-items: center;
+  color: $Main-font-color;
+  width: 666px;
+  background-color: $Background-color-container;
+  flex-direction: column;
+  margin-top: 45px;
+  margin-right: 330px;
+  margin-left: 164px;
+  padding-top: 22px;
+  padding-bottom: 40px;
+  border: 1px solid #9E00C9;
+  border-radius: 20px;
+  letter-spacing: 2px;
+}

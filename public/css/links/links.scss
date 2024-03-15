@@ -5,8 +5,8 @@
   border-radius: 20px;
   width: 980px;
   max-height: 650px;
-  margin-top: 24px;
-  margin-right: 5%;
+  margin-top: 45px;
+  margin-right: 180px;
   padding: 30px 15px 48px 15px;
 
   &-tittle {
@@ -84,6 +84,7 @@
     &__container {
       background-color: $Buttons-color;
       color: $Main-font-color;
+      position: relative;
       @include PersonalAccountTextStyles;
       font-size: 14px;
       min-height: 50px;
@@ -114,8 +115,11 @@
       }
 
       &--link {
+        position: absolute;
+        top: 50%;
+        left: calc(50% + 7px); /* Подвинуть на 20 пикселей вправо */
+        transform: translate(-50%, -50%);
         cursor: pointer;
-        margin-right: 60px;
       }
 
       &--earnings {

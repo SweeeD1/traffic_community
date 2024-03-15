@@ -7,8 +7,8 @@
   width: 980px;
   max-height: 650px;
   padding: 30px 15px 25px 15px;
-  margin-right: 5%;
-  margin-top: 24px;
+  margin-right: 180px;
+  margin-top: 45px;
 
   
 
@@ -26,6 +26,7 @@
     min-height: 0;
     width: 100%;
     overflow-y: auto; /* Добавляет вертикальное колесо прокрутки при необходимости */
+
     
 
     &__main {
@@ -40,6 +41,7 @@
       min-height: 60px;
       position: sticky;
       top: 0;
+      z-index: 1;
     }
   }
 
@@ -66,11 +68,11 @@
   align-items: center;
 
   &--block {
-    position: absolute;
-    left: 500px;
+    min-width: 255px;
+    max-width: 600px;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    gap: 160px;
   }
 
   &--name {
@@ -89,6 +91,7 @@
   width: 117px;
   height: 45px;
   transition: background-color 0.3s, color 0.3s;
+  margin-left: 67px;
 
   &:hover {
     background-color: #D333FF;

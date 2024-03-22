@@ -1,12 +1,13 @@
 @import "./mixins.scss";
 @import "./vars.scss";
 @import "./reset.scss";
-@import "./dashboard/dashboard.scss";
-@import "./account_navigation/account_navigation.scss";
-@import "./personal_account/personal_account.scss";
-@import "./links/links.scss";
-@import "./all_channels/channels.scss";
-@import "./settings/settings.scss";
+@import "./Personal_Account_CSS/dashboard/dashboard.scss";
+@import "./Personal_Account_CSS/account_navigation/account_navigation.scss";
+@import "./Personal_Account_CSS/account/personal_account.scss";
+@import "./Personal_Account_CSS/links/links.scss";
+@import "./Personal_Account_CSS/all_channels/channels.scss";
+@import "./Personal_Account_CSS/settings/settings.scss";
+@import "./Personal_Account_CSS/support/support.scss";
 
 
 .body {

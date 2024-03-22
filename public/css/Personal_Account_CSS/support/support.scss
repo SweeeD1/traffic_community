@@ -1,0 +1,132 @@
+.support__container {
+  @include PersonalAccountTextStyles;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 775px;
+  height: 539px;
+  background-color: $Background-color-container;
+  border-radius: 20px;
+  color: #fff;
+  margin-top: 45px;
+  margin-right: 270px;
+  margin-left: 115px;
+  padding: 25px 30px 40px 25px;
+  border: 1px solid #9E00C9;
+
+  &--divider {
+    border: none;
+    height: 1px;
+    width: 100%;
+    background-color:$Main-font-color;
+    margin-bottom: 25px;
+  }
+
+  &--tittle {
+    margin-bottom: 25px;
+
+    &-text {
+      letter-spacing: 2px;
+      font-size: 24px;
+    }
+  }
+
+  &--forms {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__email {
+
+      &--tittle {
+        font-size: 24px;
+      }
+
+      &-input {
+        box-sizing: border-box;
+        width: 540px;
+        height: 40px;
+        background-color: $Main-font-color;
+        border-radius: 5px;
+        color: black;
+        padding: 5px;
+      }
+    }
+
+    &__tg {
+
+      &--tittle {
+        font-size: 24px;
+      }
+
+      &-input {
+        box-sizing: border-box;
+        width: 540px;
+        height: 40px;
+        background-color: $Main-font-color;
+        border-radius: 5px;
+        color: black;
+        padding: 5px;
+      }
+    }
+
+    &__problem {
+
+      &--tittle {
+        font-size: 24px;
+      }
+
+      &-input {
+        box-sizing: border-box;
+        min-width: 700px;
+        height: 95px;
+        background-color: $Main-font-color;
+        border-radius: 5px;
+        color: black;
+        padding: 5px;
+        resize: none;
+        overflow-y: auto;
+        word-wrap: break-word;
+
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 5px;
+          background-color: black;
+        }
+        
+        &::-webkit-scrollbar-track {
+          background-color: transparent;
+        }
+        
+      }
+    }
+  }
+
+  &--button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 45px;
+    border: 1px solid #D333FF;
+    color: #C800FF;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #D333FF;
+      color: black;
+    }
+    
+  }
+}
+
+.support__container--button-block {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}

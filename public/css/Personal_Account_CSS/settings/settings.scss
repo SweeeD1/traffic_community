@@ -27,6 +27,7 @@
 
     &__text {
       @include PersonalAccountTextStyles;
+      letter-spacing: 2px;
     }
   }
 
@@ -232,4 +233,12 @@
 
 .settings__container__data--password__form--label--eye1:hover img {
   opacity: 0.8;
+}
+
+.settings__container--personal__data--button {
+  transition: all 0.3s ease;
+}
+
+.settings__container--personal__data--button:hover {
+  color: #9E00C9;
 }

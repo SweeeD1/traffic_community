@@ -8,10 +8,22 @@
 @import "./Personal_Account_CSS/all_channels/channels.scss";
 @import "./Personal_Account_CSS/settings/settings.scss";
 @import "./Personal_Account_CSS/support/support.scss";
+@import "./HomePage_CSS/header/header.scss";
+@import "./HomePage_CSS/aboutus/aboutus.scss";
+@import "./HomePage_CSS/maydem/maydem.scss";
+@import "./HomePage_CSS/secondAndThirdVectors/secondThird-vector.scss";
+@import "./HomePage_CSS/tutorial/tutorial.scss";
+@import "./HomePage_CSS/tgowners/tgowners.scss";
+@import "./HomePage_CSS/with-us/with-us.scss";
 
 
-.body {
+.personal_account-body {
   background-color: #130018;
   background-image: url(/traffic_community/public/images/main-vector.png);
   background-repeat: no-repeat;
+}
+
+.main__page-body {
+  box-sizing: border-box;
+  background-color: #130018;
 }

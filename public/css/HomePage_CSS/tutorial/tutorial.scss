@@ -1,0 +1,55 @@
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 170px;
+  width: 100%;
+  height: 405px;
+
+  &-container {
+   @include PersonalAccountTextStyles;
+   color: $Main-font-color;
+
+    &--first__Block {
+      display: flex;
+      flex-direction: row;
+
+      &-text--1 {
+        text-align: center;
+        margin-right: 190px;
+      }
+
+      &-text--2 {
+        text-align: center;
+        margin-right: 270px;
+      }
+
+      &-text--3 {
+        text-align: center;
+      }
+    }
+
+    &--second__Block {
+      display: flex;
+      flex-direction: row;
+
+      &-text--1 {
+        text-align: center;
+        margin-left: 342px;
+        margin-right: 260px;
+      }
+
+      &-text--2 {
+        text-align: center;
+      }
+    }
+
+  }
+
+  &-title {
+    @include NeonText;
+    font-family: $Main-font;
+    font-weight: 500;
+  } 
+}

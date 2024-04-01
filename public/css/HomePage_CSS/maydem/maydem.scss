@@ -1,0 +1,37 @@
+.maydem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 150px;
+
+  &-title {
+    @include NeonText;
+    font-size: 64px;
+  }
+
+  &__container {
+    @include PersonalAccountTextStyles;
+    color: $Main-font-color;
+    width: 580px;
+    height: 250px;
+    border-radius: 16px;
+    background-color: rgba(160, 0, 204, 0.2);
+    padding: 22px 18px;
+
+    &-title {
+      margin-bottom: 30px;
+    }
+
+    &-list {
+      list-style: none;
+    }
+  }
+
+  &__start-button {
+    @include MainPageButtons;
+    width: 275px;
+    height: 60px;
+  }
+}

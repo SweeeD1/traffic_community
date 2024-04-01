@@ -1,0 +1,58 @@
+.main {
+display: flex;
+flex-direction: column;
+gap: 192px;
+padding-top: 38px;
+
+  &__title {
+    @include NeonText;
+    font-family: "Kernel";
+    font-style: italic;
+    font-size: 96px;
+    font-weight: 100;
+    text-align: center;
+  }
+}
+
+.header {
+  font-family: $Main-font;
+  background-image: url(/traffic_community/public/images/main-vector.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 700px;
+  margin-bottom: 250px;
+  
+  &__navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+  }
+}
+
+.header__navigation-buttons {
+  @include PersonalAccountTextStyles;
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+
+  &-support {
+    @include Hover-Button-Effect;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    width: 180px;
+    height: 45px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: $Buttons-color;
+  }
+
+  &-login {
+    @include MainPageButtons;
+    width: 180px;
+    height: 45px;
+  }
+}

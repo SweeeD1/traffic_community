@@ -1,0 +1,116 @@
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    width: 1120px
+  }
+}
+
+.about__container-titles {
+  @include NeonText;
+  font-size: 64px;
+  width: 600px;
+  align-self: flex-start;
+}
+
+.ukranian__font {
+  font-family: $Main-font;
+  font-weight: 500;
+  font-size: 60px;
+}
+
+.about__container-blocks {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about__container-firstBlock {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: $Main-font;
+
+  &-title {
+    text-transform: uppercase;
+    color: #D333FF;
+    font-size: 40px;
+    font-style: italic;
+  }
+
+  &-text {
+    font-size: 18px;
+    align-self: flex-end;
+    color: $Main-font-color;
+  }
+
+  &-img {
+    align-self: flex-end;
+    width: 108px;
+    height: 24px;
+  }
+}
+
+.about__container-secondBlock {
+  align-self: center;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: $Main-font;
+
+  &-title {
+    text-transform: uppercase;
+    color: #D333FF;
+    font-size: 40px;
+    font-style: italic;
+  }
+
+  &-text {
+    font-size: 18px;
+    align-self: flex-end;
+    color: $Main-font-color;
+  }
+
+  &-img {
+    align-self: flex-end;
+    width: 108px;
+    height: 24px;
+  }
+}
+
+.about__container-thirdBlock {
+  align-self: flex-end;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: $Main-font;
+
+  &-title {
+    text-transform: uppercase;
+    color: #D333FF;
+    font-size: 40px;
+    font-style: italic;
+  }
+
+  &-text {
+    font-size: 18px;
+    align-self: flex-end;
+    color: $Main-font-color;
+  }
+
+  &-img {
+    align-self: flex-end;
+    width: 108px;
+    height: 24px;
+  }
+}

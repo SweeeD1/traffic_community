@@ -1,0 +1,79 @@
+.withus {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px  ;
+
+  &-button {
+    @include MainPageButtons;
+    width: 275px;
+    height: 60px;
+  }
+
+  &-text {
+    font-family: $Main-font;
+    color: $Main-font-color;
+    font-size: 22px;
+    font-weight: 500;
+    width: 650px
+  }
+
+  &-title {
+    @include NeonText;
+    font-family: $Main-font;
+    font-size: 60px;
+    font-weight: 500;
+    width: 470px;
+
+    &--eng {
+      display: inline-block;
+      font-family: "Kernel";
+      font-size: 64px;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    height: 269px;
+    width: 567px;
+    background-image: url(/traffic_community/public/images/withUsBGI.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 567px 269px;
+    font-family: $Main-font;
+    color: $Main-font-color;
+    font-size: 20px;
+    padding-top: 25px;
+    text-align: center;
+
+    &--title {
+      margin-right: 18px;
+    }
+
+    &--block {
+      display: flex;
+      flex-direction: column;
+      gap: 46px;
+    }
+  }
+}
+
+.withus-section--tittle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  &-img {
+    width: 115px;
+    height: 35px;
+    align-self: flex-start;
+    margin-left: 90px;
+  }
+}
+

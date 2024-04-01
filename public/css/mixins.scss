@@ -28,3 +28,30 @@
   border-radius: 20px;
   letter-spacing: 2px;
 }
+
+@mixin NeonText {
+  color: #D333FF;
+  text-shadow:
+  0 0 10px #D333FF,
+  0 0 100px #D333FF,
+  0 0 150px #D333FF;
+
+  font-family: "Kernel";
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 64px;
+}
+
+@mixin MainPageButtons {
+  @include PersonalAccountTextStyles;
+  align-items: center;
+  color: #C800FF;
+  border: 2px solid #D333FF;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #D333FF;
+    color: black;
+  }
+}

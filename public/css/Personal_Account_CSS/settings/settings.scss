@@ -15,7 +15,7 @@
     margin-right: 180px;
   }
 
-  &--tittle {
+  &--title {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -68,15 +68,25 @@
   justify-content: space-between;
 }
 
+.BackToGeneralButton {
+  position: absolute;
+  left: 30px;
+  width: 24px;
+  height: 24px;
+}
+
 .settings__container__data--email__form {
   display: none;
   @include PasswordEmailFormStyles;
 
-  &--tittle {
+  &--title {
+    width: 100%;
+    position: relative;
     margin-bottom: 10px;
 
     &-text {
       font-size: 24px;
+      text-align: center;
     }
   }
 
@@ -148,11 +158,14 @@
   display: none;
   @include PasswordEmailFormStyles;
 
-  &--tittle {
+  &--title {
     margin-bottom: 10px;
+    position: relative;
+    width: 100%;
 
     &-text {
       font-size: 24px;
+      text-align: center;
     }
   }
 
@@ -241,4 +254,8 @@
 
 .settings__container--personal__data--button:hover {
   color: #9E00C9;
+}
+
+.hidden {
+  display: none;
 }

@@ -9,7 +9,7 @@
   margin-right: 180px;
   padding: 30px 15px 48px 15px;
 
-  &-tittle {
+  &-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -128,6 +128,10 @@
     }
   }
 }
+
+.recall {
+  display: none;
+} 
 
 .links_container-list::-webkit-scrollbar {
   width: 5px;

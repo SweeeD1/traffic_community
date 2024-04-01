@@ -37,7 +37,7 @@
   align-items: center;
   padding-top: 13px;
 
-  &__tittle {
+  &__title {
     font-size: 24px;
     font-weight: 100;
     color: #fff;
@@ -90,7 +90,7 @@
     color: $Main-font-color;
   }
 
-  &__tittle {
+  &__title {
     font-size: 24px;
     font-weight: 100;
     color: #fff;
@@ -138,7 +138,7 @@
   width: 980px;
   gap: 3px;
 
-  &_tittle {
+  &_title {
     display: flex;
     background-color: #780099;
     width: 100%;
@@ -178,14 +178,14 @@
   }
 }
 /* Style for the pop-up container */
-.dashboard_container-history_tittle_popup-container {
+.dashboard_container-history_title_popup-container {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
 }
 
 /* Style for the pop-up message */
-.dashboard_container-history_tittle-popup-message {
+.dashboard_container-history_title-popup-message {
   padding: 12px;
   width: 313px;
   height: 70px;
@@ -207,8 +207,201 @@
 }
 
 /* Show the pop-up message on hover */
-.dashboard_container-history_tittle_popup-container:hover 
-.dashboard_container-history_tittle-popup-message {
+.dashboard_container-history_title_popup-container:hover 
+.dashboard_container-history_title-popup-message {
   visibility: visible;
   opacity: 1;
 }
+
+.dashboard_container-withdrawal {
+  display: none;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.FundsToGeneralButton {
+  position: absolute;
+  left: 30px;
+  width: 24px;
+  height: 24px;
+}
+
+.dashboard_container-withdrawal__funds {
+  @include PersonalAccountTextStyles;
+  position: relative;
+  color: $Main-font-color;
+  width: 666px;
+  height: 550px;
+  background-color: $Background-color-container;
+  border: 1px solid #9E00C9;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 13px;
+  padding-bottom: 55px;
+
+  &-title {
+    @include PersonalAccountTextStyles;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+
+  &-divider {
+    padding: 0 30px 0 30px;
+    border: none;
+    height: 1px;
+    width: 90%;
+    background-color:$Main-font-color;
+    margin-bottom: 15px;
+  }
+
+  &-forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    &--email {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      &-text {
+
+      }
+
+      &-input {
+        width: 340px;
+        height: 30px;
+        padding-left: 5px;
+        background-color: $Main-font-color;
+        border-radius: 5px;
+        color: black;
+      }
+    }
+
+    &--password {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      &-text {
+
+      }
+
+      &-input {
+        width: 340px;
+        height: 30px;
+        padding-left: 5px;
+        background-color: $Main-font-color;
+        border-radius: 5px;
+        color: black;
+      }
+    }
+
+    &--sum {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      &-text {
+
+      }
+
+      &-input {
+        width: 340px;
+        height: 30px;
+        padding-left: 5px;
+        background-color: $Main-font-color;
+        border-radius: 5px;
+        color: black;
+      }
+    }
+
+    &--card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      &-text {
+
+      }
+
+      &-input {
+        width: 340px;
+        height: 30px;
+        padding-left: 5px;
+        background-color: $Main-font-color;
+        border-radius: 5px;
+        color: black;
+      }
+    }
+
+    &--warn {
+      letter-spacing: 2px;
+    }
+
+    &--button {
+    @include Hover-Button-Effect;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 45px;
+    background-color:$Buttons-color;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.7); 
+    margin-bottom: 20px
+    }
+  }
+}
+
+.dashboard_container-withdrawal__balance {
+  @include PersonalAccountTextStyles;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $Main-font-color;
+  width: 245px;
+  height: 130px;
+  background-color: $Background-color-container;
+  border: 1px solid #9E00C9;
+  border-radius: 20px;
+  padding: 15px 10px 0px 10px;
+
+  &-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  &-divider {
+    border: none;
+    height: 1px;
+    width: 90%;
+    background-color:$Main-font-color;
+    margin-bottom: 15px;
+  }
+
+  &-money {
+    font-size: 24px;
+
+    &::after {
+      content: "UAH";
+      margin-left: 10px;
+    }
+  }
+}
+
+
+

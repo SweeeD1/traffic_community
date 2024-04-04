@@ -15,7 +15,10 @@
 @import "./HomePage_CSS/tutorial/tutorial.scss";
 @import "./HomePage_CSS/tgowners/tgowners.scss";
 @import "./HomePage_CSS/with-us/with-us.scss";
-
+@import "./HomePage_CSS/footer/footer.scss";
+@import "./Login_Page/login.scss";
+@import "./Registration_Page/registration.scss";
+@import "./ForgetPassword/forgetPassword.scss";
 
 .personal_account-body {
   background-color: #130018;
@@ -26,4 +29,25 @@
 .main__page-body {
   box-sizing: border-box;
   background-color: #130018;
+}
+
+.login-body {
+  background-color: #130018; 
+  background-image: url(/traffic_community/public/images/main-vector.png);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.registration-body {
+  background-color: #130018; 
+  background-image: url(/traffic_community/public/images/main-vector.png);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.reset-body {
+  background-color: #130018; 
+  background-image: url(/traffic_community/public/images/main-vector.png);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
 }

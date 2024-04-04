@@ -52,6 +52,9 @@ padding-top: 38px;
 
   &-login {
     @include MainPageButtons;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 180px;
     height: 45px;
   }

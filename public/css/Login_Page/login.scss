@@ -1,0 +1,136 @@
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.login {
+  display: flex;
+  font-family: $Main-font;
+  color: $Main-font-color;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 780px;
+  min-height: 466px;
+  background-color: rgba(45, 2, 56, 0.7);
+  border-radius: 20px;
+  padding: 25px 15px 40px 15px;
+
+  &__title {
+    font-size: 24px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+  }
+
+  &__divider {
+    border: none;
+    height: 1px;
+    width: 750px;
+    background-color:$Main-font-color;
+    margin-bottom: 39px;
+  }
+
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+
+    &--email {
+      display: flex;
+      flex-direction: column; 
+      gap: 5px;
+
+      &-input {
+        width: 580px;
+        height: 40px;
+        padding-left: 5px;
+        background-color: $Main-font-color;
+        border-radius: 5px;
+        color: black;
+      }
+    }
+
+    &--password {
+      display: flex;
+      position: relative;
+      flex-direction: column; 
+      gap: 5px;
+
+      &-input {
+        width: 580px;
+        height: 40px;
+        padding-left: 5px;
+        background-color: $Main-font-color;
+        border-radius: 5px;
+        color: black;
+      }
+    }
+  }
+}
+
+.login__form-container--buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 43px;
+  margin-bottom: 30px;
+
+  &-enter {
+    @include Hover-Button-Effect;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 45px;
+    background-color:$Buttons-color;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.7); 
+  }
+}
+
+.login__form-container--registration {
+  color: #BB00EE;
+  letter-spacing: 2px;
+}
+
+.login__form-container--registration--text {
+  letter-spacing: 2px;
+}
+
+.login-incorect--container {
+  display: none;
+  align-items: center;
+  letter-spacing: 2px;
+  padding-left: 20px;
+  width: 580px;
+  height: 60px;
+  background-color: #542062;
+  margin-bottom: 21px;
+}
+
+.login-incorect--container-text--dot {
+  margin-right: 10px;
+}
+
+.login__form-container--password--eye {
+  position: absolute;
+  top: 41px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.login__form-container--password--eye img {
+  width: 20px;
+  height: 20px;
+}
+
+.login__form-container--password--eye:hover img {
+  opacity: 0.8;
+}

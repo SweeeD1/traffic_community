@@ -1,0 +1,46 @@
+.footer {
+  @include PersonalAccountTextStyles;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  gap: 55px;
+  margin-top: 150px;
+  
+  &-divider {
+    border: none;
+    height: 1px;
+    width: 90%;
+    background-color:$Main-font-color;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: row;
+    gap: 325px;
+
+    &-help {
+      @include Hover-Button-Effect;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      width: 180px;
+      height: 45px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      background-color: $Buttons-color;
+    }
+
+    &-social {
+      display: flex;
+      flex-direction: row;
+      gap: 58px;
+
+    }
+  }
+}
+

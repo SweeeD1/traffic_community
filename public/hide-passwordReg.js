@@ -1,5 +1,5 @@
-const newPasswordInput = document.getElementById('NewPassword');
-const eyeButton1 = document.querySelector('.settings__container__data--password__form--label--eye1');
+const newPasswordInput = document.getElementById('YourPasswordReg');
+const eyeButton1 = document.querySelector('.registration__container-forms--password--eye');
 
 eyeButton1.addEventListener('click', () => {
     if (newPasswordInput.type === 'password') {

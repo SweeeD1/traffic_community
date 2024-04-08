@@ -10,9 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Tienne:wght@400;700;900&display=swap" rel="stylesheet">
   <title>Traffic Community))</title>
 </head>
-<body class="body">
+<body class="personal_account-body">
   <div class="personal_account__logo">
-    <img src="../public/images/Logo.png" alt="logo">
+    <a href="./home_page.html">
+      <img src="../public/images/Logo.png" alt="logo">
+    </a>
   </div>
   <div class="personal_account">
     <div class="personal_account-nav">
@@ -40,18 +42,18 @@
           
         
           <div class="dashboard_container-balance dashboard_container--styles">
-            <p class="dashboard_container-balance__tittle">Баланс</p>
+            <p class="dashboard_container-balance__title">Баланс</p>
             <div class="dashboard_container-balance__divider"></div>
             <p class="dashboard_container-balance__money">0.00 UAH</p>
             <form action="">
-              <button class="dashboard_container-balance__button">
+              <button class="dashboard_container-balance__button" onclick="toggleMargin()" type="button" >
                 <p class="dashboard_container-balance__button--text">Зняти кошти</p>
               </button>
             </form>
           </div>
       
           <div class="dashboard_container-earnings dashboard_container--styles">
-            <p class="dashboard_container-earnings__tittle">Прибуток</p>
+            <p class="dashboard_container-earnings__title">Прибуток</p>
             <div class="dashboard_container-earnings__divider"></div>
             <div class="dashboard_container-earnings__earnings-container">
               <div class="dashboard_container-earnings__month-earnings">
@@ -68,11 +70,11 @@
         </div>
   
         <div class="dashboard_container-history">
-          <div class="dashboard_container-history_tittle">
-            <p class="dashboard_container-history_tittle-text">Історія транзакцій</p>
-            <div class="dashboard_container-history_tittle_popup-container">
+          <div class="dashboard_container-history_title">
+            <p class="dashboard_container-history_title-text">Історія транзакцій</p>
+            <div class="dashboard_container-history_title_popup-container">
               <img src="../public/images/pop-up.png" alt="pop-up-button">
-              <div class="dashboard_container-history_tittle-popup-message">
+              <div class="dashboard_container-history_title-popup-message">
                 <p>Ми працюэмо з 09:00 - 20:00</p>
                 <p>Виплати проходять протягом 4-х годин</p>
               </div>
@@ -81,26 +83,66 @@
           </div>
           <div class="dashboard_container-history_container">
             <p class="dashboard_container-history_container-date">Дата</p>
-            <p class="dashboard_container-history_container-appointment">Призначення</p>
+            <p class="dashboard_container-history_container-appointment">Номер картки</p>
+            <p class="dashboard_container-history_container-sum">Сума</p>
           </div>
-          <div class="dashboard_container-history_links"></div>
+          <div class="dashboard_container-history_links">
+            <p class="dashboard_container-history_links-date">22.02.2034</p>
+            <p class="dashboard_container-history_links-appointment">4441 1111 4444 4444</p>
+            <p class="dashboard_container-history_links-sum">13 UAH</p>
+          </div>
           
         </div>
       </div>
 
-      <div class="dashboard_container-withdrawal__funds">
-        <div class="dashboard_container-withdrawal__funds-title">
-          <p class="dashboard_container-withdrawal__funds-title--text">Зняття коштів</p>
+      <div class="dashboard_container-withdrawal">
+        <div class="dashboard_container-withdrawal__funds">
+          <div class="dashboard_container-withdrawal__funds-title">
+            <button class="FundsToGeneralButton" onclick="resetMargin()"> 
+              <img src="/traffic_community/public/images/mingcute_back-2-line.png" alt="">
+            </button>
+            <p class="dashboard_container-withdrawal__funds-title--text">Зняття коштів</p>
+          </div>
+          <div class="dashboard_container-withdrawal__funds-divider"></div>
+          <form action="">
+            <div class="dashboard_container-withdrawal__funds-forms">
+              <div class="dashboard_container-withdrawal__funds-forms--email">
+                <p class="dashboard_container-withdrawal__funds-forms--email-text">Ваш Email</p>
+                <input type="email" name="email" id="" class="dashboard_container-withdrawal__funds-forms--email-input">
+              </div>
+              <div class="dashboard_container-withdrawal__funds-forms--password">
+                <p class="dashboard_container-withdrawal__funds-forms--password-text">Пароль</p>
+                <input type="password" name="email" id="" class="dashboard_container-withdrawal__funds-forms--password-input">
+              </div>
+              <div class="dashboard_container-withdrawal__funds-forms--sum">
+                <p class="dashboard_container-withdrawal__funds-forms--sum-text">Сума</p>
+                <input type="number" name="email" id="" class="dashboard_container-withdrawal__funds-forms--sum-input">
+              </div>
+              <div class="dashboard_container-withdrawal__funds-forms--card">
+                <p class="dashboard_container-withdrawal__funds-forms--card-text">Номер картки</p>
+                <input type="text" pattern="[0-9]*" maxlength="19" oninput="formatCreditCardNumber(this)"class="dashboard_container-withdrawal__funds-forms--card-input">
+              </div>
+              <button class="dashboard_container-withdrawal__funds-forms--button">Зняти</button>
+              <p class="dashboard_container-withdrawal__funds-forms--warn">Мінімальна сума виведення 500 грн</p>
+            </div>
+          </form>
+        </div>
+  
+        <div class="dashboard_container-withdrawal__balance">
+          <p class="dashboard_container-withdrawal__balance-title">Баланс</p>
+          <div class="dashboard_container-withdrawal__balance-divider"></div>
+          <p class="dashboard_container-withdrawal__balance-money">1488.00</p>
         </div>
       </div>
+
     </div>
   
     <div class="links_container" id="linksContainer">
-      <div class="links_container-tittle">
-        <p class="links_container-tittle_text">Ваші посилання</p>
+      <div class="links_container-title">
+        <p class="links_container-title_text">Ваші посилання</p>
         <form action="">
-          <button class="links_container-tittle__button">
-            <p class="links_container-tittle__button-text">Відкликанні</p>
+          <button  type="button" class="links_container-title__button" onclick="toggleLinks()">
+            <p class="links_container-title__button-text">Відкликанні</p>
           </button>
         </form>
       </div>
@@ -114,44 +156,43 @@
         <div class="links_container-list__container">
           <div class="links_container-list__container--name">
             <div class="name-text">
-              <p class="links_container-list__container--name_text">Цікавий світ</p>
-            </div>
-            <div class="name-uah">
-              <p class="links_container-list__container--name_uah">(3.5 UAH)</p>
-            </div>
-          </div>
-          <p class="links_container-list__container--link" onclick="copyText()">https://t.me/+o_zLtHJ5</p>
-          <p class="links_container-list__container--earnings">213514 UAH</p>
-        </div>
-        <div class="links_container-list__container">
-          <div class="links_container-list__container--name">
-            <div class="name-text">
-              <p class="links_container-list__container--name_text">Цікавий світ</p>
-            </div>
-            <div class="name-uah">
-              <p class="links_container-list__container--name_uah">(3.5 UAH)</p>
-            </div>
-          </div>
-          <p class="links_container-list__container--link" onclick="copyText()">https://t.me/+lYTlYTlYTlYT_zL6</p>
-          <p class="links_container-list__container--earnings">214 UAH</p>
-        </div>
-        <div class="links_container-list__container">
-          <div class="links_container-list__container--name">
-            <div class="name-text">
-              <p class="links_container-list__container--name_text">Цікавий світ</p>
+              <p class="links_container-list__container--name_text">ВАШІ ПОСИЛАННЯ</p>
             </div>
             <div class="name-uah">
               <p class="links_container-list__container--name_uah">(3 UAH)</p>
             </div>
           </div>
-          <p class="links_container-list__container--link" onclick="copyText()">https://t.zxlYTc6d</p>
+          <p class="links_container-list__container--link" onclick="copyText(this)">https://t.zxlYTc6d</p>
           <p class="links_container-list__container--earnings">2134 UAH</p>
         </div>
       </div>
+
+
+      <div class="links_container-list recall">
+        <div class="links_container-list__main">
+          <p class="links_container-list__main--name">Назва каналу</p>
+          <p class="links_container-list__main--link">Посилання</p>
+          <p class="links_container-list__main--earnings">Заробіток</p>
+        </div>
+        <div class="links_container-list__container">
+          <div class="links_container-list__container--name">
+            <div class="name-text">
+              <p class="links_container-list__container--name_text">ВІДКЛИКАНІ</p>
+            </div>
+            <div class="name-uah">
+              <p class="links_container-list__container--name_uah">(3 UAH)</p>
+            </div>
+          </div>
+          <p class="links_container-list__container--link" onclick="copyText(this)">https://t.zxlYTc6d</p>
+          <p class="links_container-list__container--earnings">2134 UAH</p>
+        </div>
+      </div>
+
+
     </div>
     
     <div class="channels__container" id="channelsContainer">
-      <p class="channels__container-tittle">Інформація про канали</p>
+      <p class="channels__container-title">Інформація про канали</p>
       <div class="channels__container-list">
         <div class="channels__container-list__main">
           <p class="channels__container-list__main--name">Назва каналу</p>
@@ -197,8 +238,8 @@
   
     <div class="settings__container" id="settingsContainer">
       <div class="settings__container--general">
-        <div class="settings__container--tittle">
-          <p class="settings__container--tittle__text">Персональні налаштування</p>
+        <div class="settings__container--title">
+          <p class="settings__container--title__text">Персональні налаштування</p>
         </div>
         <div class="settings__container--personal">
           <form action="">
@@ -227,8 +268,11 @@
         </div>
       </div>
       <div class="settings__container__data--email__form">
-        <div class="settings__container__data--email__form--tittle">
-          <p class="settings__container__data--email__form--tittle-text">
+        <div class="settings__container__data--email__form--title">
+          <button class="BackToGeneralButton">
+            <img src="/traffic_community/public/images/mingcute_back-2-line.png" alt="">
+          </button>
+          <p class="settings__container__data--email__form--title-text">
             Зміна пошти
           </p>
         </div>
@@ -236,13 +280,13 @@
         <form action="">
           <div class="settings__container__data--email__form--label">
             <div class="settings__container__data--email__form--label--oldEmail">
-              <p class="settings__container__data--email__form--label--oldEmail_tittle">
+              <p class="settings__container__data--email__form--label--oldEmail_title">
                 Введіть нову пошту 
               </p>
               <input type="email" name="email" id="email">
             </div>
             <div class="settings__container__data--email__form--label--newEmail">
-              <p class="settings__container__data--email__form--label--oldEmail_tittle">
+              <p class="settings__container__data--email__form--label--oldEmail_title">
                 Введіть код підтверження
               </p>
               <input type="text" name="confirmation_code" id="confirmation_code" maxlength="6" pattern="[0-9]{6}" placeholder="Код відправлений на пошту" required>
@@ -253,8 +297,11 @@
       </div>
 
       <div class="settings__container__data--password__form">
-        <div class="settings__container__data--password__form--tittle">
-          <p class="settings__container__data--password__form--tittle-text">
+        <div class="settings__container__data--password__form--title">
+          <button class="BackToGeneralButton">
+            <img src="/traffic_community/public/images/mingcute_back-2-line.png" alt="">
+          </button>
+          <p class="settings__container__data--password__form--title-text">
             Зміна паролю
           </p>
         </div>
@@ -262,16 +309,16 @@
         <form action="">
           <div class="settings__container__data--password__form--label">
             <div class="settings__container__data--password__form--label--oldPassword">
-              <p class="settings__container__data--password__form--label--oldPassword_tittle">
+              <p class="settings__container__data--password__form--label--oldPassword_title">
                 Введіть старий пароль
               </p>
               <input type="password" name="OldPassword" id="OldPassword">
             </div>
             <div class="settings__container__data--password__form--label--newPassword">
-              <p class="settings__container__data--password__form--label--newPassword_tittle">
+              <p class="settings__container__data--password__form--label--newPassword_title">
                 Введіть новий пароль
               </p>
-              <input type="password" name="NewPassword" id="NewPassword"  required>
+              <input type="password" name="NewPassword" id="NewPassword" required>
               <button class="settings__container__data--password__form--label--eye1" type="button">
                 <img src="../public/images/Hide-password.png" alt="Скрыть пароль">
               </button>
@@ -284,7 +331,37 @@
     </div>
 
     <div class="support__container" id="supportContainer">
-      
+      <form action="">
+        <div class="support__container--title">
+          <p class="support__container--title-text">З'явились проблеми?</p>
+        </div>
+        <div class="support__container--divider"></div>
+        <div class="support__container--forms">
+          <div class="support__container--forms__email">
+            <p class="support__container--forms__email--title">
+              Ваша пошта
+            </p>
+            <input type="email" name="email" class="support__container--forms__email-input">
+          </div>
+          <div class="support__container--forms__tg">
+            <p class="support__container--forms__tg--title">
+              Ваш ТГ
+            </p>
+            <input type="text" name="telegram" class="support__container--forms__tg-input">
+          </div>
+          <div class="support__container--forms__problem">
+            <p class="support__container--forms__problem--title">
+              Опишіть проблему
+            </p>
+            <textarea name="problem" class="support__container--forms__problem-input"></textarea>
+          </div>
+        </div>
+        <div class="support__container--button-block">
+          <button class="support__container--button">
+            <p class="support__container--button-text">Відправити</p>
+          </button>
+        </div>
+      </form>
     </div>
   
   </div>
@@ -294,5 +371,6 @@
 <script src="../public/copy-links.js"></script>
 <script src="../public/email-password-form.js"></script>
 <script src="../public/hide-password.js"></script>
+<script src="../public/withdrawal-funds.js"></script>
 </html>
 

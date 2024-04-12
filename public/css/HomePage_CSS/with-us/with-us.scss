@@ -4,15 +4,35 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 100px  ;
+  gap: 100px;
+
+  @include OnStandartMobile() {
+    gap: 50px;
+  }
 
   &-button {
     @include MainPageButtons;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 275px;
     height: 60px;
+
+    @include OnSmallMobile {
+      width: 200px;
+    }
   }
 
   &-text {
+    @include OnBigMobile {
+      font-size: 20px;
+      width: 330px;
+    }
+  
+    @include OnSmallMobile {
+      text-align: center;
+    }
+
     font-family: $Main-font;
     color: $Main-font-color;
     font-size: 22px;
@@ -21,13 +41,30 @@
   }
 
   &-title {
+    @include OnBigMobile {
+      font-size: 50px;
+      text-align: center;
+      width: 80%
+    }
     @include NeonText;
+
+    @include OnStandartMobile() {
+      font-size: 38px;
+    }
     font-family: $Main-font;
     font-size: 60px;
     font-weight: 500;
     width: 470px;
 
     &--eng {
+      @include OnBigMobile {
+        font-size: 54px;
+      }
+
+      @include OnStandartMobile() {
+        font-size: 40px;
+      }
+  
       display: inline-block;
       font-family: "Kernel";
       font-size: 64px;
@@ -35,6 +72,26 @@
   }
 
   &-container {
+
+    @include OnBigMobile {
+      width: 450px;
+      background-size: contain;
+      padding-top: 45px;
+      gap: 37px;
+    } 
+
+    @include OnStandartMobile() {
+      width: 380px;
+      background-size: contain;
+      padding-top: 60px;
+      gap: 20px;
+    }
+
+    @include OnSmallMobile {
+      gap: 35px;
+      width: 100%;
+    }
+
     display: flex;
     flex-direction: column;
     gap: 55px;
@@ -52,12 +109,51 @@
 
     &--title {
       margin-right: 18px;
+
+      @include OnStandartMobile() {
+        margin-right: 16px;
+        font-size: 16px;
+      }
     }
 
     &--block {
       display: flex;
       flex-direction: column;
       gap: 46px;
+
+      @include OnStandartMobile() {
+        align-items: center;
+        gap: 17px;
+      }
+
+      @include OnSmallMobile {
+        align-items: center;
+        width: 330px;
+      }
+  
+      @include OnBigMobile() {
+        align-items: center;
+        gap: 13px;
+      }
+
+      &-text {
+
+        @include OnBigMobile {
+         font-size: 18px;
+         width: 370px;
+        }
+
+        @include OnStandartMobile {
+          font-size: 16px;
+          width: 300px;
+        }
+          
+        @include OnSmallMobile {
+          font-size: 14px;
+          width: 270px;
+          margin-left: 50px;
+        }
+      }
     }
   }
 }
@@ -70,6 +166,11 @@
   gap: 30px;
 
   &-img {
+
+    @include OnBigMobile {
+      display: none;
+    }
+  
     width: 115px;
     height: 35px;
     align-self: flex-start;

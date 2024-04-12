@@ -40,16 +40,16 @@ function formatCreditCardNumber(input) {
   input.value = value;
 }
 
-function toggleMargin() {
-  var dashboardContainer = document.getElementById("dashboardContainer");
-  if (dashboardContainer.style.marginRight === "0px") {
-    dashboardContainer.style.marginRight = "180px"; // Возвращаем к исходному значению
-  } else {
-    dashboardContainer.style.marginRight = "0px"; // Устанавливаем новое значение
-  }
-}
+// function toggleMargin() {
+//   var dashboardContainer = document.getElementById("dashboardContainer");
+//   if (dashboardContainer.style.marginRight === "0px") {
+//     dashboardContainer.style.marginRight = "180px"; // Возвращаем к исходному значению
+//   } else {
+//     dashboardContainer.style.marginRight = "0px"; // Устанавливаем новое значение
+//   }
+// }
 
-function resetMargin() {
-  var dashboardContainer = document.getElementById("dashboardContainer");
-  dashboardContainer.style.marginRight = "180px"; // Возвращаем к исходному значению
-}
+// function resetMargin() {
+//   var dashboardContainer = document.getElementById("dashboardContainer");
+//   dashboardContainer.style.marginRight = "180px"; // Возвращаем к исходному значению
+// }

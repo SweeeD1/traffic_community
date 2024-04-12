@@ -9,9 +9,27 @@
   &-title {
     @include NeonText;
     font-size: 64px;
+
+    @include OnBigMobile {
+      font-size: 54px;
+    }
+
+    @include OnStandartMobile {
+      font-size: 40px;
+    }
+
+    @include OnSmallMobile {
+      font-size: 36px;
+    }
   }
 
   &__container {
+
+    @include OnBigMobile {
+      width: 100%;
+      height: fit-content;
+    }
+
     @include PersonalAccountTextStyles;
     color: $Main-font-color;
     width: 580px;
@@ -31,6 +49,9 @@
 
   &__start-button {
     @include MainPageButtons;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 275px;
     height: 60px;
   }

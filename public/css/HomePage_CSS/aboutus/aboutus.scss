@@ -9,7 +9,15 @@
     flex-direction: column;
     justify-content: center;
     gap: 50px;
-    width: 1120px
+    width: 1120px;
+
+    @include OnTablet() {
+      width: 100%;
+    }
+
+    @include OnBigMobile() {
+      width: 100%
+    }
   }
 }
 
@@ -18,21 +26,59 @@
   font-size: 64px;
   width: 600px;
   align-self: flex-start;
+
+  @include OnBigMobile {
+    font-size: 54px;
+    width: 500px;
+    text-align: center;
+  }
+
+  @include OnStandartMobile() {
+    font-size: 40px;
+    width: 100%;
+  }
+
+  @include OnTablet {
+    align-self: center;
+  }
+  
 }
 
 .ukranian__font {
   font-family: $Main-font;
   font-weight: 500;
   font-size: 60px;
+
+  @include OnBigMobile {
+    font-size: 50px;
+  }
+
+  @include OnStandartMobile() {
+    font-size: 38px;
+  }
+
+  @include OnSmallMobile {
+    font-size: 34px;
+  }
 }
 
 .about__container-blocks {
   margin-left: 100px;
   display: flex;
   flex-direction: column;
+
+  @include OnTablet {
+    gap: 45px;
+    margin-left: 0px;
+  }
 }
 
 .about__container-firstBlock {
+  @include OnTablet {
+    align-self: center;
+    align-items: center;
+  }
+
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -44,15 +90,31 @@
     color: #D333FF;
     font-size: 40px;
     font-style: italic;
+
+    @include OnStandartMobile() {
+      font-size: 30px;
+    }
   }
 
   &-text {
+    @include OnTablet {
+      align-self: center;
+    }
+    
+    @include OnStandartMobile() {
+      font-size: 18px;
+    }
+
     font-size: 18px;
     align-self: flex-end;
     color: $Main-font-color;
   }
 
   &-img {
+    @include OnTablet {
+      align-self: center;
+    }
+    
     align-self: flex-end;
     width: 108px;
     height: 24px;
@@ -60,6 +122,12 @@
 }
 
 .about__container-secondBlock {
+  @include OnTablet {
+    align-self: center;
+    align-items: center;
+  }
+
+  
   align-self: center;
   width: fit-content;
   display: flex;
@@ -72,22 +140,43 @@
     color: #D333FF;
     font-size: 40px;
     font-style: italic;
+
+    @include OnStandartMobile() {
+      font-size: 30px;
+    }
   }
 
   &-text {
     font-size: 18px;
     align-self: flex-end;
     color: $Main-font-color;
+
+    @include OnTablet {
+      align-self: center;
+    }
+
+    @include OnStandartMobile() {
+      font-size: 18px;
+    }
   }
 
   &-img {
     align-self: flex-end;
     width: 108px;
     height: 24px;
+
+    @include OnTablet {
+      align-self: center;
+    }
   }
 }
 
 .about__container-thirdBlock {
+  @include OnTablet {
+    align-self: center;
+    align-items: center;
+  }
+
   align-self: flex-end;
   width: fit-content;
   display: flex;
@@ -100,15 +189,31 @@
     color: #D333FF;
     font-size: 40px;
     font-style: italic;
+
+    @include OnStandartMobile() {
+      font-size: 30px;
+    }
   }
 
   &-text {
     font-size: 18px;
     align-self: flex-end;
     color: $Main-font-color;
+
+    @include OnTablet {
+      align-self: center;
+    }
+
+    @include OnStandartMobile() {
+      font-size: 18px;
+    }
   }
 
   &-img {
+    @include OnTablet {
+      align-self: center;
+    }
+
     align-self: flex-end;
     width: 108px;
     height: 24px;

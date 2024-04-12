@@ -9,6 +9,17 @@
   margin-right: 180px;
   padding: 30px 15px 48px 15px;
 
+  @include OnTablet {
+    margin-right: 0px;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  @include OnBigMobile {
+    width: 100%;
+  }
+
   &-title {
     display: flex;
     flex-direction: row;
@@ -21,7 +32,11 @@
       color: $Main-font-color;
       font-family: $Main-font;
       font-size: 24px;
-      letter-spacing: 2px
+      letter-spacing: 2px;
+
+      @include OnBigMobile {
+        font-size: 20px;
+      }
     }
 
     &__button {
@@ -72,13 +87,24 @@
 
       &--name {
         width: 140px;
+
+        @include OnBigMobile {
+          font-size: 18px;
+        }
       }
 
       &--link {
         width: 140px;
+
+        @include OnBigMobile {
+          font-size: 18px;
+        }
       }
 
       &--earnings {
+        @include OnBigMobile {
+          font-size: 18px;
+        }
       }
     }
 
@@ -97,6 +123,11 @@
       align-items: center;
       justify-content: space-between;
 
+      @include OnBigMobile {
+        padding: 0 5px 0 5px;
+      }
+
+
       &--name {
         width: 170px;
         display: flex;
@@ -106,8 +137,22 @@
         white-space: nowrap;
         text-overflow: ellipsis;
 
+                  
+        @include OnBigMobile {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: min-content;
+        }
+
         &_text {
           display: inline;
+
+          @include OnSmallMobile {
+            display: block;
+            text-wrap: wrap;
+            text-align: center;
+          }
         }
 
         &_uah {
@@ -150,5 +195,5 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: 5px;
+
 }

@@ -8,11 +8,26 @@
   margin-top: 45px;
   margin-right: 180px;
 
+  @include OnTablet {
+    margin-right: 0px;
+    width: 100%;
+  }
+
   &-general {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 90px;
+
+    @include OnTablet {
+      width: 100%;
+      align-items: center;
+    }
+
+    @include OnBigMobile {
+     gap: 46px;
+    }
   }
 }
 
@@ -20,6 +35,16 @@
   display: flex;
   flex-direction: row;
   gap: 22px;
+
+  @include OnTablet {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @include OnBigMobile {
+    flex-direction: column;
+  }
 }
 
 .dashboard_container--styles {
@@ -29,6 +54,11 @@
   border-radius: 20px;
   font-family: $Main-font;
   box-sizing: border-box;
+
+  @include OnTablet {
+    width: 400px;
+    min-width: 300px;
+  }
 }
 
 .dashboard_container-balance {
@@ -49,7 +79,7 @@
     padding: 0 30px 0 30px;
     border: none;
     height: 1px;
-    width: 370px;
+    width: 90%;
     background-color:$Main-font-color;
     margin-bottom: 39px;
   }
@@ -57,8 +87,12 @@
   &__money {
     @include PersonalAccountTextStyles;
     color: $Main-font-color;
-    padding-bottom: 65px;
+    margin-bottom: 65px;
     letter-spacing: 2px;
+
+    @include OnBigMobile {
+      font-size: 18px;
+    }
   }
 
   &__button {
@@ -102,7 +136,7 @@
     padding: 0 30px 0 30px;
     border: none;
     height: 1px;
-    width: 370px;
+    width: 100%;
     background-color: #fff;
     margin-bottom: 39px;
   }
@@ -120,6 +154,10 @@
     flex-direction: row;
     @include PersonalAccountTextStyles;
     letter-spacing: 2px;
+
+    @include OnBigMobile {
+      font-size: 18px;
+    }
   }
 
   &__general-earnings {
@@ -128,6 +166,10 @@
     flex-direction: row;
     @include PersonalAccountTextStyles;
     letter-spacing: 2px;
+
+    @include OnBigMobile {
+      font-size: 18px;
+    }
   }
 }
 
@@ -137,6 +179,11 @@
   font-family: $Main-font;
   width: 980px;
   gap: 3px;
+
+  @include OnTablet {
+    width: 84%;
+    gap: 1px;
+  }
 
   &_title {
     display: flex;
@@ -165,6 +212,10 @@
     padding: 17px 30px 17px 30px;
     color: $Main-font-color;
     
+    @include OnBigMobile {
+     padding: 10px;
+     align-items: center
+    }
 
     &-date {
 
@@ -173,6 +224,7 @@
 
   &_links {
     @include PersonalAccountTextStyles;
+    position: relative;
     color: $Main-font-color;
     padding: 17px 10px 17px 10px;
     display: flex;
@@ -181,8 +233,27 @@
     background-color:$Buttons-color;
     width: 100%;
     height: 60px;
+
+    &-appointment {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      align-self: center;
+      white-space: nowrap; /* Запрещаем перенос строк */
+
+      
+    }
+
+    @include OnBigMobile {
+      padding: 5px;
+      font-size: 16px;
+      align-items: center
+    }
   }
 }
+
+
 /* Style for the pop-up container */
 .dashboard_container-history_title_popup-container {
   position: relative;
@@ -224,6 +295,17 @@
   flex-direction: row;
   gap: 20px;
   margin-left: 100px;
+
+  @include OnBigMobile {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+  }
+
+  @include OnTablet {
+    justify-content: center;
+  }
 }
 
 .FundsToGeneralButton {
@@ -248,21 +330,37 @@
   padding-top: 13px;
   padding-bottom: 55px;
 
+  @include OnBigMobile {
+    width: 85%;
+    justify-content: center;
+  }
+
   &-title {
     @include PersonalAccountTextStyles;
     font-size: 24px;
     color: #fff;
     margin-bottom: 10px;
     letter-spacing: 2px;
+
+    @include OnStandartMobile {
+      font-size: 20px;
+    }
   }
 
   &-divider {
-    padding: 0 30px 0 30px;
     border: none;
     height: 1px;
     width: 90%;
     background-color:$Main-font-color;
     margin-bottom: 15px;
+
+    @include OnTablet {
+      margin-bottom: 0px;
+    }
+
+    @include OnBigMobile {
+      margin-bottom: 0px;
+    }
   }
 
   &-forms {
@@ -270,6 +368,14 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
+
+    @include OnBigMobile {
+      margin-top: 10px;
+    }
+
+    @include OnTablet {
+      margin-top: 15px ;
+    }
 
     &--email {
       display: flex;
@@ -289,6 +395,14 @@
         background-color: $Main-font-color;
         border-radius: 5px;
         color: black;
+
+        @include OnBigMobile {
+          width: 80%;
+        }
+
+        @include OnStandartMobile {
+          font-size: 18px;
+        }
       }
     }
 
@@ -310,6 +424,14 @@
         background-color: $Main-font-color;
         border-radius: 5px;
         color: black;
+
+        @include OnBigMobile {
+          width: 80%;
+        }
+
+        @include OnStandartMobile {
+          font-size: 18px;
+        }
       }
     }
 
@@ -331,6 +453,14 @@
         background-color: $Main-font-color;
         border-radius: 5px;
         color: black;
+
+        @include OnBigMobile {
+          width: 80%;
+        }
+
+        @include OnStandartMobile {
+          font-size: 18px;
+        }
       }
     }
 
@@ -352,11 +482,24 @@
         background-color: $Main-font-color;
         border-radius: 5px;
         color: black;
+
+        @include OnBigMobile {
+          width: 80%;
+        }
+
+        @include OnStandartMobile {
+          font-size: 18px;
+        }
       }
     }
 
     &--warn {
       letter-spacing: 2px;
+
+      @include OnBigMobile {
+        font-size: 20px;
+        text-align: center;
+      }
     }
 
     &--button {
@@ -389,7 +532,7 @@
 
   &-title {
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
   }
 
   &-divider {

@@ -19,6 +19,11 @@
   border-radius: 20px;
   padding: 25px 15px 40px 15px;
 
+  @include OnBigMobile {
+    width: 100%;
+    padding: 10px 25px 45px 25px;
+  }
+
   &__title {
     font-size: 24px;
     align-self: flex-start;
@@ -30,9 +35,13 @@
   &__divider {
     border: none;
     height: 1px;
-    width: 750px;
+    width: 100%;
     background-color:$Main-font-color;
     margin-bottom: 39px;
+
+    @include OnBigMobile() {
+      margin-bottom: 15px;
+    }
   }
 
   &__form-container {
@@ -40,11 +49,21 @@
     flex-direction: column;
     gap: 30px;
     font-size: 20px;
+    
+    @include OnBigMobile {
+      width: 100%;
+    }
 
     &--email {
       display: flex;
       flex-direction: column; 
       gap: 5px;
+
+      @include OnBigMobile {
+        align-items: center;
+      }
+
+      
 
       &-input {
         width: 580px;
@@ -53,6 +72,14 @@
         background-color: $Main-font-color;
         border-radius: 5px;
         color: black;
+        
+        @include OnBigMobile {
+          width: 400px;
+        }
+
+        @include OnSmallMobile {
+          width: 80%;
+        }
       }
     }
 
@@ -61,6 +88,10 @@
       position: relative;
       flex-direction: column; 
       gap: 5px;
+      
+      @include OnBigMobile {
+        align-items: center;
+      }
 
       &-input {
         width: 580px;
@@ -69,6 +100,14 @@
         background-color: $Main-font-color;
         border-radius: 5px;
         color: black;
+
+        @include OnBigMobile {
+          width: 400px;
+        }
+
+        @include OnSmallMobile {
+          width: 80%;
+        }
       }
     }
   }
@@ -79,6 +118,16 @@
   flex-direction: row;
   gap: 43px;
   margin-bottom: 30px;
+
+  @include OnSmallMobile {
+    gap: 15px;
+  }
+
+  @include OnBigMobile {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px
+  }
 
   &-enter {
     @include Hover-Button-Effect;
@@ -100,6 +149,10 @@
 
 .login__form-container--registration--text {
   letter-spacing: 2px;
+
+  @include OnBigMobile {
+    text-align: center;
+  }
 }
 
 .login-incorect--container {
@@ -124,6 +177,23 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  @include OnBigMobile {
+    position: absolute;
+    right: 15%;
+  }
+
+  // @include ForLoginEye {
+  //   right: 10%;
+  // }
+
+  // @include OnStandartMobile {
+  //   right: 5%;
+  // }
+
+  @include OnSmallMobile {
+    right: 12%;
+  }
 }
 
 .login__form-container--password--eye img {

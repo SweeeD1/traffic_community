@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Tienne:wght@400;700;900&display=swap" rel="stylesheet">
   <title>Traffic Community))</title>
 </head>
+
 <body class="personal_account-body">
   <div class="personal_account__logo">
     <a href="./home_page.html">
@@ -19,39 +21,44 @@
   <div class="personal_account">
     <div class="personal_account-nav">
       <div class="personal_account-nav__case">
-        <button onclick="openDashboard()" class="personal_account-nav__button" data-action="openDashboard" data-active="true">Дашборд</button>
+        <button onclick="openDashboard()" class="personal_account-nav__button" data-action="openDashboard"
+          data-active="true">Дашборд</button>
       </div>
       <div class="personal_account-nav__case">
-        <button onclick="openLinks()" class="personal_account-nav__button" data-action="openLinks" data-active="true">Посилання</button>
+        <button onclick="openLinks()" class="personal_account-nav__button" data-action="openLinks"
+          data-active="true">Посилання</button>
       </div>
       <div class="personal_account-nav__case">
-        <button onclick="openChannels()" class="personal_account-nav__button" data-action="openChannels" data-active="true">Всі канали</button>
+        <button onclick="openChannels()" class="personal_account-nav__button" data-action="openChannels"
+          data-active="true">Всі канали</button>
       </div>
       <div class="personal_account-nav__case">
-        <button onclick="openSettings()" class="personal_account-nav__button" data-action="openSettings" data-active="true">Налаштування</button>
+        <button onclick="openSettings()" class="personal_account-nav__button" data-action="openSettings"
+          data-active="true">Налаштування</button>
       </div>
       <div class="personal_account-nav__case">
-        <button onclick="openSupport()" class="personal_account-nav__button" data-action="openSupport" data-active="true">Підтримка</button>
+        <button onclick="openSupport()" class="personal_account-nav__button" data-action="openSupport"
+          data-active="true">Підтримка</button>
       </div>
     </div>
-  
+
     <div class="dashboard_container" id="dashboardContainer">
-      
+
       <div class="dashboard_container-general">
         <div class="dashboard_container-money">
-          
-        
+
+
           <div class="dashboard_container-balance dashboard_container--styles">
             <p class="dashboard_container-balance__title">Баланс</p>
             <div class="dashboard_container-balance__divider"></div>
             <p class="dashboard_container-balance__money">0.00 UAH</p>
             <form action="">
-              <button class="dashboard_container-balance__button" onclick="toggleMargin()" type="button" >
+              <button class="dashboard_container-balance__button" onclick="toggleMargin()" type="button">
                 <p class="dashboard_container-balance__button--text">Зняти кошти</p>
               </button>
             </form>
           </div>
-      
+
           <div class="dashboard_container-earnings dashboard_container--styles">
             <p class="dashboard_container-earnings__title">Прибуток</p>
             <div class="dashboard_container-earnings__divider"></div>
@@ -66,9 +73,9 @@
               </div>
             </div>
           </div>
-    
+
         </div>
-  
+
         <div class="dashboard_container-history">
           <div class="dashboard_container-history_title">
             <p class="dashboard_container-history_title-text">Історія транзакцій</p>
@@ -79,7 +86,7 @@
                 <p>Виплати проходять протягом 4-х годин</p>
               </div>
             </div>
-          
+
           </div>
           <div class="dashboard_container-history_container">
             <p class="dashboard_container-history_container-date">Дата</p>
@@ -88,17 +95,17 @@
           </div>
           <div class="dashboard_container-history_links">
             <p class="dashboard_container-history_links-date">22.02.2034</p>
-            <p class="dashboard_container-history_links-appointment">4441 1111 4444 4444</p>
+            <p class="dashboard_container-history_links-appointment" id="cardContent">1111 2222 3333 4444</p>
             <p class="dashboard_container-history_links-sum">13 UAH</p>
-          </div>
-          
+          </div>1
+
         </div>
       </div>
 
       <div class="dashboard_container-withdrawal">
         <div class="dashboard_container-withdrawal__funds">
           <div class="dashboard_container-withdrawal__funds-title">
-            <button class="FundsToGeneralButton" onclick="resetMargin()"> 
+            <button class="FundsToGeneralButton" onclick="resetMargin()">
               <img src="/traffic_community/public/images/mingcute_back-2-line.png" alt="">
             </button>
             <p class="dashboard_container-withdrawal__funds-title--text">Зняття коштів</p>
@@ -112,7 +119,8 @@
               </div>
               <div class="dashboard_container-withdrawal__funds-forms--password">
                 <p class="dashboard_container-withdrawal__funds-forms--password-text">Пароль</p>
-                <input type="password" name="email" id="" class="dashboard_container-withdrawal__funds-forms--password-input">
+                <input type="password" name="email" id=""
+                  class="dashboard_container-withdrawal__funds-forms--password-input">
               </div>
               <div class="dashboard_container-withdrawal__funds-forms--sum">
                 <p class="dashboard_container-withdrawal__funds-forms--sum-text">Сума</p>
@@ -120,14 +128,14 @@
               </div>
               <div class="dashboard_container-withdrawal__funds-forms--card">
                 <p class="dashboard_container-withdrawal__funds-forms--card-text">Номер картки</p>
-                <input type="text" pattern="[0-9]*" maxlength="19" oninput="formatCreditCardNumber(this)"class="dashboard_container-withdrawal__funds-forms--card-input">
+                <input type="text" pattern="[0-9]*" maxlength="19" oninput="formatCreditCardNumber(this)"
+                  class="dashboard_container-withdrawal__funds-forms--card-input">
               </div>
               <button class="dashboard_container-withdrawal__funds-forms--button">Зняти</button>
               <p class="dashboard_container-withdrawal__funds-forms--warn">Мінімальна сума виведення 500 грн</p>
             </div>
           </form>
         </div>
-  
         <div class="dashboard_container-withdrawal__balance">
           <p class="dashboard_container-withdrawal__balance-title">Баланс</p>
           <div class="dashboard_container-withdrawal__balance-divider"></div>
@@ -136,12 +144,12 @@
       </div>
 
     </div>
-  
+
     <div class="links_container" id="linksContainer">
       <div class="links_container-title">
         <p class="links_container-title_text">Ваші посилання</p>
         <form action="">
-          <button  type="button" class="links_container-title__button" onclick="toggleLinks()">
+          <button type="button" class="links_container-title__button" onclick="toggleLinks()">
             <p class="links_container-title__button-text">Відкликанні</p>
           </button>
         </form>
@@ -190,7 +198,7 @@
 
 
     </div>
-    
+
     <div class="channels__container" id="channelsContainer">
       <p class="channels__container-title">Інформація про канали</p>
       <div class="channels__container-list">
@@ -204,38 +212,38 @@
 
         <form action="">
           <div class="channels__container-list__container">
-            <p class="channels__container-list__container--name">Цікавий світ </p>
+            <p class="channels__container-list__container--name">Цікавий світ</p>
             <div class="channels__container-list__container--block">
               <p class="channels__container-list__container--profit">3.5 UAH</p>
               <p class="channels__container-list__container--subscribers">222112</p>
-            </div> 
+            </div>
             <button class="channels__container-list__container--accept generateButton">Згенерувати</button>
           </div>
         </form>
         <form action="">
           <div class="channels__container-list__container">
-            <p class="channels__container-list__container--name">Цікавий світ </p>
+            <p class="channels__container-list__container--name">Цікавий світ</p>
             <div class="channels__container-list__container--block">
               <p class="channels__container-list__container--profit">3 UAH</p>
               <p class="channels__container-list__container--subscribers">235</p>
-            </div> 
+            </div>
             <button class="channels__container-list__container--accept generateButton">Згенерувати</button>
           </div>
         </form>
         <form action="">
           <div class="channels__container-list__container">
-            <p class="channels__container-list__container--name">Цікавий світ </p>
+            <p class="channels__container-list__container--name">Цікавий світ</p>
             <div class="channels__container-list__container--block">
               <p class="channels__container-list__container--profit">3.3 UAH</p>
               <p class="channels__container-list__container--subscribers">15343</p>
-            </div> 
+            </div>
             <button class="channels__container-list__container--accept generateButton">Згенерувати</button>
           </div>
         </form>
 
       </div>
     </div>
-  
+
     <div class="settings__container" id="settingsContainer">
       <div class="settings__container--general">
         <div class="settings__container--title">
@@ -253,7 +261,7 @@
               </button>
             </div>
           </form>
-         
+
           <form action="">
             <div class="settings__container--personal__data--general">
               <div class="settings__container--personal__data">
@@ -281,7 +289,7 @@
           <div class="settings__container__data--email__form--label">
             <div class="settings__container__data--email__form--label--oldEmail">
               <p class="settings__container__data--email__form--label--oldEmail_title">
-                Введіть нову пошту 
+                Введіть нову пошту
               </p>
               <input type="email" name="email" id="email">
             </div>
@@ -289,7 +297,8 @@
               <p class="settings__container__data--email__form--label--oldEmail_title">
                 Введіть код підтверження
               </p>
-              <input type="text" name="confirmation_code" id="confirmation_code" maxlength="6" pattern="[0-9]{6}" placeholder="Код відправлений на пошту" required>
+              <input type="text" name="confirmation_code" id="confirmation_code" maxlength="6" pattern="[0-9]{6}"
+                placeholder="Код відправлений на пошту" required>
             </div>
             <button class="settings__container__data--email__form--label_button">Змінити</button>
           </div>
@@ -322,11 +331,20 @@
               <button class="settings__container__data--password__form--label--eye1" type="button">
                 <img src="../public/images/Hide-password.png" alt="Скрыть пароль">
               </button>
-              
+
             </div>
             <button class="settings__container__data--password__form--label_button">Змінити</button>
           </div>
         </form>
+      </div>
+      <button class="settings__container--exitButton">Вийти з аккаунту</button>
+      <div class="overlay"></div>
+      <div class="modal">
+        <p>Ви дійсно бажаєте вийти?</p>
+        <div class="modal-container">
+          <button class="yesButton">Так</button>
+          <button class="noButton">Ні</button>
+        </div>
       </div>
     </div>
 
@@ -363,7 +381,7 @@
         </div>
       </form>
     </div>
-  
+
   </div>
 
 </body>
@@ -372,5 +390,7 @@
 <script src="../public/email-password-form.js"></script>
 <script src="../public/hide-password.js"></script>
 <script src="../public/withdrawal-funds.js"></script>
+<script src="../public/cardHide.js"></script>
+<script src="../public/hide-channel.js"></script>
+<script src="../public/leave-account.js"></script>
 </html>
-

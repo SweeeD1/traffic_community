@@ -1,5 +1,32 @@
 .settings__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: fit-content;
+  gap: 10px;
+
+  @include OnTablet {
+    width: 100%;
+  }
+
+  &--exitButton {
+    @include PersonalAccountTextStyles;
+    @include Hover-Button-Effect;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    width: 295px;
+    height: 45px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: $Buttons-color;
+
+    @include OnTablet {
+      align-self: inherit;
+    }  
+  }
 
   &--general {
     @include PersonalAccountTextStyles;
@@ -13,6 +40,20 @@
     color: #fff;
     margin-top: 45px;
     margin-right: 180px;
+
+    @include OnTablet {
+      margin-right: 0px;
+      width: 75%;
+    }
+
+    @include OnBigMobile {
+      width: 90%;
+    }
+    
+    @include OnStandartMobile {
+      width: 100%;
+      height: 370px;
+    }
   }
 
   &--title {
@@ -36,15 +77,28 @@
     flex-direction: column;
     gap: 7px;
 
+    @include OnStandartMobile {
+      align-items: center;
+    }
+
     &--text {
       font-weight: 100;
       font-size: 15px;
       letter-spacing: 2px;
+
+      @include OnStandartMobile {
+        font-size: 22px;
+      }
     }
 
     &--email {
       font-size: 20px;
       letter-spacing: 2px;
+
+      
+      @include OnStandartMobile {
+        font-size: 22px;
+      }
     }
 
     &--password {
@@ -60,12 +114,25 @@
   margin-left: 27px;
   margin-top: 32px;
   margin-right: 96px;
+
+  @include OnStandartMobile {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .settings__container--personal__data--general {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @include OnStandartMobile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 }
 
 .BackToGeneralButton {
@@ -78,6 +145,12 @@
 .settings__container__data--email__form {
   display: none;
   @include PasswordEmailFormStyles;
+
+  @include OnTablet {
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
   &--title {
     width: 100%;
@@ -157,6 +230,11 @@
 .settings__container__data--password__form  {
   display: none;
   @include PasswordEmailFormStyles;
+  @include OnTablet {
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
   &--title {
     margin-bottom: 10px;
@@ -250,6 +328,11 @@
 
 .settings__container--personal__data--button {
   transition: all 0.3s ease;
+  
+  @include OnStandartMobile {
+    font-size: 22px;
+    color: #C800FF;
+  }
 }
 
 .settings__container--personal__data--button:hover {
@@ -258,4 +341,65 @@
 
 .hidden {
   display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Здесь можно настроить уровень затемнения */
+  z-index: 999;
+  display: none;
+}
+
+.modal {
+  font-size: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 26px;
+  color: #fff;
+  font-family: $Main-font;
+  width: 375px;
+  height: 143px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #780099;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  display: none;
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  gap: 134px;
+}
+
+/* Дополнительные стили для кнопок */
+.modal button {
+  margin: 0 10px;
+}
+
+.modal button.yesButton {
+  background-color: #542062;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+}
+
+.modal button.noButton {
+  background-color: #542062;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
 }

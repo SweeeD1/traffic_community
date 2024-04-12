@@ -10,7 +10,18 @@
   margin-right: 180px;
   margin-top: 45px;
 
-  
+  @include OnTablet {
+    margin-right: 0px;
+    width: 80%;
+  }
+
+  @include OnBigMobile {
+    width: 100%;
+  }
+
+  @include OnSmallMobile {
+    width: 100%;
+  }
 
   &-title {
     @include PersonalAccountTextStyles;
@@ -34,14 +45,24 @@
       position: sticky;
       align-items: center;
       padding-left: 15px;
-      gap: 334px;
+      justify-content: space-between;
+      // gap: 334px;
       color: $Main-font-color;
       @include PersonalAccountTextStyles;
       background-color: $Buttons-color-hover;
       min-height: 60px;
-      position: sticky;
       top: 0;
       z-index: 1;
+
+      @include OnBigMobile {
+        font-size: 18px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      &--name {
+        
+      }
     }
   }
 
@@ -50,11 +71,35 @@
 .channels__container-list__main--block {
   display: flex;
   flex-direction: row;
-  gap: 95px;
+  gap: 90px;
+  margin-right: 160px;
+
+  @include OnTablet {
+    margin-right: 125px;
+    gap: 50px;
+  }
+
+  @include OnBigMobile {
+    margin-right: 10px;
+    gap: 35px;
+  }
+  
+  @include OnSmallMobile {
+    margin-right: 0px;
+    gap: 30px;
+    align-items: center;
+  }
+}
+
+.channels__container-list__main--subscribers {
+  @include OnSmallMobile {
+    width: min-content;
+  }
 }
 
 .channels__container-list__container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   position: relative;
   font-family: $Main-font;
@@ -67,17 +112,47 @@
   font-size: 18px;
   align-items: center;
 
+  @include OnBigMobile {
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+  }
+
   &--block {
     min-width: 255px;
     max-width: 600px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+
+    @include OnTablet {
+      justify-content: space-around;
+      gap: 60px;
+    }
+
+    @include OnBigMobile {
+      
+    }
+
+    @include OnSmallMobile {
+      justify-content: center;
+      min-width: 0px;
+      width: 180px;
+    }
   }
 
   &--name {
     margin-right: auto;
   }
+}
+
+.channels__container-list__container--name.short {
+  overflow: hidden;
+  text-overflow: ellipsis; /* Добавить "..." */
+  white-space: nowrap; /* Не переносить слова на новую строку */
 }
 
 .channels__container-list__container--accept {
@@ -96,6 +171,22 @@
   &:hover {
     background-color: #D333FF;
     color: black;
+  }
+
+  @include OnTablet {
+    width: 100px;
+    margin-left: 35px;
+  }
+  
+  @include OnBigMobile {
+    width: 60%;
+    margin-left: 0px;
+    height: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
   }
 }
 

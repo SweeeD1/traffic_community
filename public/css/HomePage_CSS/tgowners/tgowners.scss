@@ -7,20 +7,39 @@
   margin-top: 280px;
   margin-bottom: 200px;
 
+  @include OnTablet {
+    margin-top: 100px;
+  }
+
 
   &-title {
     @include NeonText;
+    @include OnBigMobile {
+      font-size: 50px;
+      width: fit-content;
+      text-align: center;
+    }
+    
     font-family: $Main-font;
     font-weight: 500;
     font-size: 60px;
   
     &-eng {
+      @include OnBigMobile {
+        font-size: 54px;
+      }
       font-family: "Kernel";
       font-size: 64px;
     }
   }
   
   &__container {
+
+    @include OnBigMobile {
+      width: 100%;
+      height: fit-content;
+    }
+  
     @include PersonalAccountTextStyles;
     color: $Main-font-color;
     width: 580px;

@@ -3,6 +3,15 @@
   flex-direction: column;
   gap: 30px;
   margin-top: 46px;
+
+  @include OnTablet {
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+  }
 }
 
 .personal_account-nav__case {

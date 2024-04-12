@@ -55,3 +55,51 @@
     color: black;
   }
 }
+
+@mixin OnDeskTop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin OnTablet {
+  @media (max-width: 1439px) {
+    @content;
+  }
+}
+
+// @mixin OnTabletMaxWidth {
+//   @media (max-width: 1279px)  {
+//     @content;
+//   }
+// }
+
+@mixin OnBigMobile {
+  @media (max-width: 740px) {
+    @content;
+  }
+}
+
+@mixin OnStandartMobile {
+  @media (max-width: 514px) {
+    @content;
+  }
+}
+
+@mixin OnSmallMobile {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+
+@mixin ForLinks {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin ForLoginEye {
+  @media (max-width: 537px) {
+    @content;
+  }
+}

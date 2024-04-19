@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tienne:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Traffic Community))</title>
+  </head>
+<body class="orderList-body">
+  <div class="personal_account__logo">
+    <a href="./home_page.html">
+      <img src="../public/images/Logo.png" alt="logo">
+    </a>
+  </div>
+  <header class="admin-header">
+    <form action="">
+      <button class="admin-leave-button admin-buttons">Вийти</button>
+    </form>
+    <a href="./withdrawMoney.html" class="admin-buttons">Запити</a>
+    <a href="./orderList.html" class="admin-buttons">Замовлення</a>
+    <a href="./createOrder.html" class="admin-buttons">Створення</a>
+  </header>
+
+  <div class="orderList">
+    <div class="orderList-container">
+      <p class="orderList-container--title">Cписок замовлень</p>
+      <button class="orderList-container-recallButton" onclick="toggleActive()">Відкликанні</button>
+      <div class="orderList-active">
+        <div class="orderList-container--order">
+          <p class="orderList-container--order-text">Назва:АКТИВНИЙ</p>
+          <p class="orderList-container--order-text">ID Канала:</p>
+          <p class="orderList-container--order-text">Ціль:</p>
+          <p class="orderList-container--order-text">Опис:</p>
+          <p class="orderList-container--order-text">Кліент:</p>
+          <p class="orderList-container--order-text">Ціна за підписника:</p>
+          <p class="orderList-container--order-text">Загальна ціна:</p>
+          <p class="orderList-container--order-text">Статус:</p>
+          <div class="order-actions">
+            <form action="/changeOrderStatus" method="post" class="orderList-form">
+              <input type="hidden" name="orderId" value="">
+              <select name="status">
+                <option value="active">Активный</option>
+                <option value="inactive">Неактивный</option>
+              </select>
+              <button type="submit" class="orderList-container--order-text-changeButton">Змінити статус</button>
+            </form>
+            <form action="/changePriceForOneSubs" method="post" class="orderList-form">
+              <input type="hidden" name="orderId" value="">
+              <input type="number" step="0.01" name="priceForOneSubs" value="" class="orderList-container--order-text-input">
+              <button type="submit" class="orderList-container--order-text-changeButton">Змінити ціну за підпісника</button>
+            </form> 
+            <form action="/changeGoal" method="post" class="orderList-form">
+              <input type="hidden" name="orderId" value="">
+              <input type="text" name="goal" value="" class="orderList-container--order-text-input">
+              <button type="submit" class="orderList-container--order-text-changeButton">Змінити ціль</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="orderList-inactive">
+        <div class="orderList-container--order">
+          <p class="orderList-container--order-text">Назва:НЕАКТИВНИЙ</p>
+          <p class="orderList-container--order-text">ID Канала:</p>
+          <p class="orderList-container--order-text">Ціль:</p>
+          <p class="orderList-container--order-text">Опис:</p>
+          <p class="orderList-container--order-text">Кліент:</p>
+          <p class="orderList-container--order-text">Ціна за підписника:</p>
+          <p class="orderList-container--order-text">Загальна ціна:</p>
+          <p class="orderList-container--order-text">Статус:</p>
+          <div class="order-actions">
+            <form action="/changeOrderStatus" method="post" class="orderList-form">
+              <input type="hidden" name="orderId" value="">
+              <select name="status">
+                <option value="active">Активный</option>
+                <option value="inactive">Неактивный</option>
+              </select>
+              <button type="submit" class="orderList-container--order-text-changeButton">Змінити статус</button>
+            </form>
+            <form action="/changePriceForOneSubs" method="post" class="orderList-form">
+              <input type="hidden" name="orderId" value="">
+              <input type="number" step="0.01" name="priceForOneSubs" value="" class="orderList-container--order-text-input">
+              <button type="submit" class="orderList-container--order-text-changeButton">Змінити ціну за підпісника</button>
+            </form> 
+            <form action="/changeGoal" method="post" class="orderList-form">
+              <input type="hidden" name="orderId" value="" class="orderList-form">
+              <input type="text" name="goal" value="" class="orderList-container--order-text-input">
+              <button type="submit" class="orderList-container--order-text-changeButton">Змінити ціль</button>
+            </form>
+            <form action="">
+              <button>Видалити</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Функция, которая будет выполняться при нажатии на кнопку
+    
+        // Функция, которая будет выполняться при нажатии на кнопку
+        function toggleActive() {
+            // Получаем элементы блоков по классам
+            var orderListActive = document.getElementsByClassName('orderList-active');
+            var orderListInactive = document.getElementsByClassName('orderList-inactive');
+            var orderListRecallButton = document.getElementsByClassName('orderList-container-recallButton');
+
+            // Проверяем, скрыт ли блок orderList-active
+            if (orderListActive[0].style.display !== 'none') {
+                // Если не скрыт, скрываем его и показываем блок orderList-inactive
+                for (var i = 0; i < orderListActive.length; i++) {
+                    orderListActive[i].style.display = 'none';
+                }
+                for (var i = 0; i < orderListInactive.length; i++) {
+                    orderListInactive[i].style.display = 'block';
+                }
+                // Изменяем текст кнопки
+                orderListRecallButton[0].innerText = 'Активні';
+            } else {
+                // Если скрыт, показываем его и скрываем блок orderList-inactive
+                for (var i = 0; i < orderListInactive.length; i++) {
+                    orderListInactive[i].style.display = 'none';
+                }
+                for (var i = 0; i < orderListActive.length; i++) {
+                    orderListActive[i].style.display = 'block';
+                }
+                // Изменяем текст кнопки
+                orderListRecallButton[0].innerText = 'Відкликанні';
+            }
+        }
+</script>
+</body>
+</html>

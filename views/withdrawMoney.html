@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tienne:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Traffic Community))</title>
+  </head>
+<body class="orderList-body">
+  <div class="personal_account__logo">
+    <a href="./home_page.html">
+      <img src="../public/images/Logo.png" alt="logo">
+    </a>
+  </div>
+  <header class="admin-header">
+    <form action="">
+      <button class="admin-leave-button admin-buttons">Вийти</button>
+    </form>
+    <a href="./withdrawMoney.html" class="admin-buttons">Запити</a>
+    <a href="./orderList.html" class="admin-buttons">Замовлення</a>
+    <a href="./createOrder.html" class="admin-buttons">Створення</a>
+  </header>
+
+  <div class="withdraw">
+    <div class="withdraw-lists">
+      <p class="withdraw-lists-title">Списки запитів</p>
+      <div class="withdraw-lists-container">
+        <button class="withdraw-lists-container-button pending active" onclick="toggleBlock('pending')">Очікуючі</button>
+        <button class="withdraw-lists-container-button approved" onclick="toggleBlock('approved')">Підтвердженні</button>
+        <button class="withdraw-lists-container-button rejected" onclick="toggleBlock('rejected')">Відхилені</button>
+      </div>
+    </div> 
+    <div class="withdraw-lists-pendingContainer withdraw-block" id="pending-block">
+      <div class="withdraw-lists-pendingContainer-block">
+        <p class="withdraw-lists-pendingContainer-block-text">User ID:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">User:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">ID запиту:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Сумма:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Номер: 1111 2222 3333 4444</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Банк:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Час:</p>
+        <form action="" class="withdraw-lists-pendingContainer-form">
+          <button class="withdraw-lists-pendingContainer-form--accept">Приняти</button>
+          <button class="withdraw-lists-pendingContainer-form--cancel">Відхилити</button>
+        </form>
+      </div>
+      <div class="withdraw-lists-pendingContainer-block">
+        <p class="withdraw-lists-pendingContainer-block-text">User ID:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">User:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">ID запиту:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Сумма:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Номер:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Банк:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Час:</p>
+        <form action="" class="withdraw-lists-pendingContainer-form">
+          <button class="withdraw-lists-pendingContainer-form--accept">Приняти</button>
+          <button class="withdraw-lists-pendingContainer-form--cancel">Відхилити</button>
+        </form>
+      </div>
+    </div>
+    <div class="withdraw-lists-pendingContainer withdraw-block" id="approved-block">
+      <div class="withdraw-lists-pendingContainer-block">
+        <p class="withdraw-lists-pendingContainer-block-text">User ID:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">User:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">ID запиту:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Сумма:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Номер: 1111 2222 3333 4444</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Банк:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Час:</p>
+      </div>
+      <div class="withdraw-lists-pendingContainer-block">
+        <p class="withdraw-lists-pendingContainer-block-text">User ID:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">User:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">ID запиту:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Сумма:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Номер: 1111 2222 3333 4444</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Банк:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Час:</p>
+      </div>
+      <div class="withdraw-lists-pendingContainer-block">
+        <p class="withdraw-lists-pendingContainer-block-text">User ID:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">User:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">ID запиту:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Сумма:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Номер: 1111 2222 3333 4444</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Банк:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Час:</p>
+      </div>
+      <div class="withdraw-lists-pendingContainer-block">
+        <p class="withdraw-lists-pendingContainer-block-text">User ID:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">User:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">ID запиту:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Сумма:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Номер: 1111 2222 3333 4444</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Банк:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Час:</p>
+      </div>
+    </div>
+    <div class="withdraw-lists-pendingContainer withdraw-block" id="rejected-block">
+      <div class="withdraw-lists-pendingContainer-block">
+        <p class="withdraw-lists-pendingContainer-block-text">User ID:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">User:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">ID запиту:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Сумма:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Номер: 1111 2222 3333 4444</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Банк:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Час:</p>
+      </div>
+      <div class="withdraw-lists-pendingContainer-block">
+        <p class="withdraw-lists-pendingContainer-block-text">User ID:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">User:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">ID запиту:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Сумма:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Номер: 1111 2222 3333 4444</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Банк:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Час:</p>
+      </div>
+      <div class="withdraw-lists-pendingContainer-block">
+        <p class="withdraw-lists-pendingContainer-block-text">User ID:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">User:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">ID запиту:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Сумма:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Номер: 1111 2222 3333 4444</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Банк:</p>
+        <p class="withdraw-lists-pendingContainer-block-text">Час:</p>
+      </div>
+    </div>
+  </div>
+  <script>
+   function toggleBlock(blockId) {
+    // Скрыть все блоки
+    var blocks = document.getElementsByClassName("withdraw-block");
+    for (var i = 0; i < blocks.length; i++) {
+        blocks[i].style.display = "none";
+    }
+
+    // Сделать видимым только выбранный блок
+    document.getElementById(blockId + "-block").style.display = "flex";
+
+    // Изменить цвет активной кнопки и вернуть цвет неактивных кнопок
+    var buttons = document.getElementsByClassName("withdraw-lists-container-button");
+    for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].classList.contains(blockId)) {
+            buttons[i].classList.add("active"); // Добавить класс "active" к активной кнопке
+        } else {
+            buttons[i].classList.remove("active"); // Удалить класс "active" из неактивных кнопок
+        }
+    }
+}
+
+// Переключиться на блок "Очікуючі" при загрузке страницы
+window.onload = function() {
+    toggleBlock("pending");
+};
+  </script>
+</body>
+</html>

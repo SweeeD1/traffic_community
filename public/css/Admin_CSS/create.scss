@@ -1,0 +1,95 @@
+// .orders-container {
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .form-container {
+//   @include PersonalAccountTextStyles;
+//   display: flex;
+//   flex-direction: column;
+//   color: black;
+//   width: 90%;
+//   background-color: #fff;
+// }
+
+// .form-container-styles {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 5px;
+// }
+
+// .form-container-input {
+//   border: gray;
+// }
+
+.orders {
+  font-family: $Main-font;
+}
+
+.auth {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+
+.auth a {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #ab65da;
+  color: #ab65da;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.auth a:hover {
+  background-color: #ab65da;
+  color: white;
+}
+
+.form-container {
+  width: 50%;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  
+  @include OnTablet {
+    width: 90%;
+  }
+  
+}
+
+.form-container label,
+.form-container input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="submit"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-container input[type="submit"] {
+  border: none;
+  border-radius: 4px;
+  background-color: #8148c2;
+  color: white;
+  cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #8148c2;
+}
+
+.form-container-input {
+  width: 90%;
+}

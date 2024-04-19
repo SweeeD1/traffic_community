@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tienne:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Traffic Community))</title>
+  </head>
+<body>
+  <body class="orderList-body">
+    <div class="personal_account__logo">
+      <a href="./home_page.html">
+        <img src="../public/images/Logo.png" alt="logo">
+      </a>
+    </div>
+    <header class="admin-header">
+      <form action="">
+        <button class="admin-leave-button admin-buttons">Вийти</button>
+      </form>
+      <a href="./withdrawMoney.html" class="admin-buttons">Запити</a>
+      <a href="./orderList.html" class="admin-buttons">Замовлення</a>
+      <a href="./createOrder.html" class="admin-buttons">Створення</a>
+    </header>
+    <div class="orders">
+      <div class="form-container">
+        <h2>Publication Form</h2>
+        <br />
+        <form action="/publishOrder" method="POST">
+          <label for="TelegramChannelID">TelegramChannelName:</label>
+          <input
+            type="text"
+            id="TelegramChannelName"
+            name="TelegramChannelName"
+            placeholder="Enter the Telegram Channel Name"
+            class="form-container-input"
+          />
+
+          <label for="TelegramChannelID">TelegramChannelID:</label>
+          <input
+            type="text"
+            id="TelegramChannelID"
+            name="TelegramChannelID"
+            placeholder="Enter the Telegram Channel ID"
+            class="form-container-input"
+          />
+
+          <label for="goal">Goal:</label>
+          <input
+            type="number"
+            id="goal"
+            name="goal"
+            placeholder="Enter the goal"
+            class="form-container-input"
+          />
+
+          <label for="description">Description:</label>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            placeholder="Enter the description"
+            class="form-container-input"
+          />
+
+          <label for="username">Client username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter client username for the order"
+            class="form-container-input"
+          />
+
+          <label for="priceForOneSubscriber"
+            >Price for the one subscriber:</label
+          >
+          <input
+            type="number"
+            id="priceForOneSubscriber"
+            name="priceForOneSubscriber"
+            placeholder="Enter price for the one subscriber for the order"
+            step="0.01"
+            class="form-container-input"
+          />
+
+          <label for="PriceForOrder">Total price for the order:</label>
+          <input
+            type="number"
+            id="PriceForOrder"
+            name="PriceForOrder"
+            placeholder="Enter total price for the order"
+            class="form-container-input"
+          />
+
+          <input type="submit" value="Publish Order" />
+        </form>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+.admin-leave-button, .admin-buttons{
+  @include MainPageButtons;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+}
+
+.admin-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+
+.orderList {
+  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include PersonalAccountTextStyles;
+    font-weight: initial;
+    color: $Main-font-color;
+    width: 80%;
+    background-color: $Background-color-container;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include OnBigMobile {
+      font-size: 14px;
+    }
+
+    &--title {
+
+      @include OnBigMobile {
+        font-size: 25px;
+      }
+
+      font-size: 35px;
+    }
+  }
+}
+
+.orderList-form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+
+  @include OnBigMobile {
+    flex-direction: column;
+  }
+}
+
+
+.orderList-container--order {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid #9E00C9;
+  padding: 20px;
+}
+
+.order-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.orderList-container--order-text-input {
+  width: 30%;
+  background-color: white;
+
+  @include OnBigMobile {
+    width: 50%;
+  }
+}
+
+.orderList-container--order-text-changeButton {
+  border: 1px solid #9E00C9;
+  border-radius: 10px;
+  padding: 5px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #D333FF;
+    color: black;
+  }
+}
+
+.orderList-container-recallButton {
+  border: 1px solid #9E00C9;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  &:hover {
+    background-color: #D333FF;
+    color: black;
+  }
+}
+
+.orderList-inactive {
+  display: none;
+}

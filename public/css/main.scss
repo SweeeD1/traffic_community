@@ -19,6 +19,9 @@
 @import "./Login_Page/login.scss";
 @import "./Registration_Page/registration.scss";
 @import "./ForgetPassword/forgetPassword.scss";
+@import "./Admin_CSS/admin.scss";
+@import "./Admin_CSS/withdraw.scss";
+@import "./Admin_CSS/create.scss";
 
 .personal_account-body {
   background-color: #130018;
@@ -46,6 +49,13 @@
 }
 
 .reset-body {
+  background-color: #130018; 
+  background-image: url(/traffic_community/public/images/main-vector.png);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.orderList-body {
   background-color: #130018; 
   background-image: url(/traffic_community/public/images/main-vector.png);
   background-repeat: no-repeat;

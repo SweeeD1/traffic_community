@@ -154,6 +154,10 @@
     margin-right: 0px;
   }
 
+  @include OnBigMobile {
+    width: 100vw;
+  }
+
   &--title {
     width: 100%;
     position: relative;
@@ -236,6 +240,10 @@
     margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
+  }
+  
+  @include OnBigMobile {
+    width: 100vw;
   }
 
   &--title {

@@ -59,6 +59,11 @@
     width: 400px;
     min-width: 300px;
   }
+
+  @include OnSmallMobile {
+    width: 100%;
+  }
+
 }
 
 .dashboard_container-balance {

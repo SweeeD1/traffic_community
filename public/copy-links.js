@@ -23,10 +23,10 @@ function copyText(element) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  var button = document.querySelector('.links_container-title__button');
-  var buttonText = button.querySelector('.links_container-title__button-text');
-  var regularLinks = document.querySelector('.links_container-list');
-  var recallLinks = document.querySelector('.links_container-list.recall');
+  let button = document.querySelector('.links_container-title__button');
+  let buttonText = button.querySelector('.links_container-title__button-text');
+  let regularLinks = document.querySelector('.links_container-list');
+  let recallLinks = document.querySelector('.links_container-list.recall');
 
   button.addEventListener('click', function() {
     if (buttonText.textContent === "Відкликанні") {

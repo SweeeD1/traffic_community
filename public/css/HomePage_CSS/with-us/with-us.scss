@@ -20,6 +20,7 @@
 
     @include OnSmallMobile {
       width: 200px;
+      text-align: center;
     }
   }
 
@@ -90,6 +91,7 @@
     @include OnSmallMobile {
       gap: 35px;
       width: 100%;
+      align-items: center;
     }
 
     display: flex;
@@ -151,7 +153,6 @@
         @include OnSmallMobile {
           font-size: 14px;
           width: 270px;
-          margin-left: 50px;
         }
       }
     }
